@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --color-forest: #001b0c;
+  --color-forest-light: #0a2a17;
+  --color-lime: #b3e02e;
+  --color-lime-dim: #93bc23;
+  --color-sage: #c7dad4;
+  --color-sage-dim: #8fa79f;
+  --color-white: #ffffff;
+}
+
+@theme inline {
+  --color-forest: var(--color-forest);
+  --color-forest-light: var(--color-forest-light);
+  --color-lime: var(--color-lime);
+  --color-lime-dim: var(--color-lime-dim);
+  --color-sage: var(--color-sage);
+  --color-sage-dim: var(--color-sage-dim);
+
+  --font-heading: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+
+  --radius-sharp: 4px;
+  --radius-sharp-lg: 8px;
+}
+
+body {
+  background: var(--color-forest);
+  color: var(--color-sage);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-forest);
+}
