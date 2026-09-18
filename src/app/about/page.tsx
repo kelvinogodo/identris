@@ -46,7 +46,7 @@ export default function AboutPage() {
     <>
       <Section tone="dark" className="pt-20 pb-14 md:pt-28">
         <Eyebrow index="ABOUT">Identris Systems Limited</Eyebrow>
-        <h1 className="mt-5 max-w-3xl font-heading text-4xl font-semibold text-sage md:text-5xl">
+        <h1 className="mt-5 max-w-3xl font-heading text-5xl font-semibold text-sage md:text-6xl">
           Built to be trusted with something important
         </h1>
         <div className="mt-10 grid gap-10 lg:grid-cols-12">
@@ -93,13 +93,13 @@ export default function AboutPage() {
             </div>
           </Frame>
           <div className="lg:col-span-9">
-            <h2 className="font-heading text-2xl font-semibold text-sage md:text-3xl">
+            <h2 className="font-heading text-3xl font-semibold text-sage md:text-4xl">
               Kelvin Ogodo
             </h2>
             <p className="mt-1 font-mono-tech text-xs uppercase tracking-[0.15em] text-lime">
               CEO / Managing Director
             </p>
-            <div className="mt-5 space-y-4 border-t border-sage-dim/20 pt-5 text-sm leading-relaxed text-sage-dim md:text-base">
+            <div className="mt-5 space-y-4 border-t border-sage-dim/20 pt-5 text-base leading-relaxed text-sage-dim md:text-lg">
               <p>
                 Kelvin has been programming since 2020, with a full stack
                 background that spans frontend interfaces, backend systems,
@@ -138,7 +138,7 @@ export default function AboutPage() {
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28">
               <Eyebrow index="04">Standards</Eyebrow>
-              <h2 className="mt-4 font-heading text-3xl font-semibold text-sage md:text-4xl">
+              <h2 className="mt-4 font-heading text-4xl font-semibold text-sage md:text-5xl">
                 Principles
               </h2>
               <p className="mt-4 max-w-sm text-sage-dim">
@@ -162,10 +162,10 @@ export default function AboutPage() {
                     <Icon name={principle.icon} className="h-5 w-5" />
                   </span>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold text-sage">
+                    <h3 className="font-heading text-xl font-semibold text-sage">
                       {principle.title}
                     </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-sage-dim">
+                    <p className="mt-1.5 text-base leading-relaxed text-sage-dim">
                       {principle.description}
                     </p>
                   </div>

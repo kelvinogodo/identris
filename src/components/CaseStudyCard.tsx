@@ -40,10 +40,10 @@ export function CaseStudyCard({
           </p>
           <p className="mt-1.5 text-sage">{caseStudy.client}</p>
 
-          <h3 className="mt-6 font-heading text-xl font-semibold text-sage md:text-2xl">
+          <h3 className="mt-6 font-heading text-2xl font-semibold text-sage md:text-3xl">
             {caseStudy.title}
           </h3>
-          <p className="mt-3 text-sm leading-relaxed text-sage-dim">
+          <p className="mt-3 text-base leading-relaxed text-sage-dim">
             {caseStudy.summary}
           </p>
 
@@ -84,7 +84,7 @@ export function CaseStudyCard({
       </Frame>
 
       <div className="mt-10">
-        <h2 className="font-heading text-3xl font-semibold text-sage md:text-4xl">
+        <h2 className="font-heading text-4xl font-semibold text-sage md:text-5xl">
           {caseStudy.title}
         </h2>
 
@@ -99,7 +99,7 @@ export function CaseStudyCard({
             <p className="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-lime">
               01 / Problem
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-sage-dim">
+            <p className="mt-3 text-base leading-relaxed text-sage-dim">
               {caseStudy.problem}
             </p>
           </div>
@@ -107,7 +107,7 @@ export function CaseStudyCard({
             <p className="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-lime">
               02 / Solution
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-sage-dim">
+            <p className="mt-3 text-base leading-relaxed text-sage-dim">
               {caseStudy.solution}
             </p>
           </div>
@@ -135,7 +135,7 @@ export function CaseStudyCard({
           </p>
           <ul className="mt-4 flex flex-col gap-3">
             {caseStudy.result.map((item) => (
-              <li key={item} className="flex items-start gap-3 border-b border-sage-dim/10 pb-3 text-sm text-sage-dim">
+              <li key={item} className="flex items-start gap-3 border-b border-sage-dim/10 pb-3 text-base text-sage-dim">
                 <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-lime" />
                 {item}
               </li>

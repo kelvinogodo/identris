@@ -47,7 +47,7 @@ export function ContactForm() {
         <p className="font-mono-tech text-[11px] uppercase tracking-[0.15em] text-lime">
           Message sent
         </p>
-        <h2 className="mt-3 font-heading text-2xl font-semibold text-sage">
+        <h2 className="mt-3 font-heading text-3xl font-semibold text-sage">
           We&apos;ll be in touch.
         </h2>
         <p className="mt-2 text-sage-dim">
@@ -160,7 +160,7 @@ export function ContactForm() {
 }
 
 const inputClasses =
-  "w-full border border-sage-dim/30 bg-forest px-4 py-3 text-sm text-sage placeholder:text-sage-dim/50 outline-none transition-colors focus:border-lime";
+  "w-full border border-sage-dim/30 bg-forest px-4 py-3 text-base text-sage placeholder:text-sage-dim/50 outline-none transition-colors focus:border-lime";
 
 function Field({
   label,

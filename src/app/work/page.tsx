@@ -17,10 +17,10 @@ export default function WorkPage() {
     <>
       <Section tone="dark" className="pt-20 pb-14 md:pt-28">
         <Eyebrow index="01">Case studies</Eyebrow>
-        <h1 className="mt-5 max-w-2xl font-heading text-4xl font-semibold text-sage md:text-5xl">
+        <h1 className="mt-5 max-w-2xl font-heading text-5xl font-semibold text-sage md:text-6xl">
           Work
         </h1>
-        <p className="mt-5 max-w-2xl text-lg text-sage-dim">
+        <p className="mt-5 max-w-2xl text-xl text-sage-dim">
           Systems we&apos;ve built and the institutions and businesses that
           now run on them.
         </p>

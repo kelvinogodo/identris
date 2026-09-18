@@ -17,10 +17,10 @@ export default function TemplatesPage() {
     <>
       <Section tone="dark" className="pt-20 pb-10 md:pt-28">
         <Eyebrow index="10">Design gallery</Eyebrow>
-        <h1 className="mt-5 max-w-2xl font-heading text-4xl font-semibold text-sage md:text-5xl">
+        <h1 className="mt-5 max-w-2xl font-heading text-5xl font-semibold text-sage md:text-6xl">
           Design Templates
         </h1>
-        <p className="mt-5 max-w-2xl text-lg text-sage-dim">
+        <p className="mt-5 max-w-2xl text-xl text-sage-dim">
           Browse how a system like this could look for your industry. These
           are illustrative design directions, not working sites — a starting
           point for a conversation about what we&apos;d actually build for you.

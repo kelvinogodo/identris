@@ -19,10 +19,10 @@ export default function ContactPage() {
     <Section tone="dark" className="pt-20 pb-24 md:pt-28">
       <div className="max-w-2xl">
         <Eyebrow index="06">Get in touch</Eyebrow>
-        <h1 className="mt-5 font-heading text-4xl font-semibold text-sage md:text-5xl">
+        <h1 className="mt-5 font-heading text-5xl font-semibold text-sage md:text-6xl">
           Start a Project
         </h1>
-        <p className="mt-5 text-lg text-sage-dim">
+        <p className="mt-5 text-xl text-sage-dim">
           Tell us what your organization is trying to build. We&apos;ll reply
           honestly about scope, timeline, and whether we&apos;re the right
           team for it.
@@ -41,7 +41,7 @@ export default function ContactPage() {
             <p className="font-mono-tech text-[11px] uppercase tracking-[0.15em] text-lime">
               Direct Contact
             </p>
-            <dl className="mt-5 flex flex-col gap-4 border-t border-sage-dim/15 pt-4 text-sm">
+            <dl className="mt-5 flex flex-col gap-4 border-t border-sage-dim/15 pt-4 text-base">
               <div>
                 <dt className="font-mono-tech text-[10px] uppercase tracking-[0.15em] text-sage-dim">
                   Email
@@ -76,7 +76,7 @@ export default function ContactPage() {
             <p className="font-mono-tech text-[11px] uppercase tracking-[0.15em] text-lime">
               What happens next
             </p>
-            <p className="mt-4 border-t border-sage-dim/15 pt-4 text-sm leading-relaxed text-sage-dim">
+            <p className="mt-4 border-t border-sage-dim/15 pt-4 text-base leading-relaxed text-sage-dim">
               We read every message personally. Expect a reply within one to
               two business days with next steps, or a straight answer if it
               isn&apos;t a fit.

@@ -105,10 +105,10 @@ export function TemplateGallery({ templates }: { templates: TemplateEntry[] }) {
                   </span>
                 )}
               </div>
-              <h3 className="mt-1.5 font-heading text-lg font-semibold text-sage">
+              <h3 className="mt-1.5 font-heading text-xl font-semibold text-sage">
                 {template.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-sage-dim">
+              <p className="mt-2 text-base leading-relaxed text-sage-dim">
                 {template.description}
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-sage-dim/15 pt-4">
@@ -155,7 +155,7 @@ export function TemplateGallery({ templates }: { templates: TemplateEntry[] }) {
                     </span>
                   )}
                 </div>
-                <h2 className="mt-1.5 font-heading text-2xl font-semibold text-sage">
+                <h2 className="mt-1.5 font-heading text-3xl font-semibold text-sage">
                   {preview.title}
                 </h2>
               </div>
@@ -169,7 +169,7 @@ export function TemplateGallery({ templates }: { templates: TemplateEntry[] }) {
               </button>
             </div>
 
-            <p className="mt-3 max-w-2xl text-sm text-sage-dim">
+            <p className="mt-3 max-w-2xl text-base text-sage-dim">
               {preview.personality}
             </p>
 

@@ -12,7 +12,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[2fr_1fr_1fr]">
           <div>
             <Logo />
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-sage-dim">
+            <p className="mt-4 max-w-sm text-base leading-relaxed text-sage-dim">
               {siteConfig.description}
             </p>
             <SocialLinks className="mt-6" />

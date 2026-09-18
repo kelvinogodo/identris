@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/ui/Section";
-import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -60,12 +59,11 @@ export default function HomePage() {
       {/* Hero */}
       <Section tone="dark" className="pt-20 pb-16 md:pt-28 md:pb-20">
         <div className="max-w-3xl">
-          <Eyebrow index="LAGOS, NIGERIA">Identris Systems Limited</Eyebrow>
-          <h1 className="mt-6 font-heading text-4xl font-semibold leading-[1.08] text-sage md:text-6xl lg:text-[4rem]">
+          <h1 className="font-heading text-5xl font-semibold leading-[1.08] text-sage md:text-7xl lg:text-[4.5rem]">
             Systems that help your organization{" "}
             <span className="text-lime text-glow">scale and stay reliable.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-sage-dim">
+          <p className="mt-6 max-w-xl text-xl text-sage-dim">
             Identris Systems Limited builds identity, web, and infrastructure
             systems for businesses, NGOs, and government parastatals —
             engineered to keep working when it matters most.
@@ -79,30 +77,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-
-        <div className="mt-16 flex flex-wrap gap-x-10 gap-y-3 border-t border-sage-dim/15 pt-6 font-mono-tech text-[11px] uppercase tracking-[0.15em] text-sage-dim">
-          <span><span className="text-lime">13</span> LGAs deployed</span>
-          <span>Fingerprint + photo capture</span>
-          <span>Starlink-enabled field ops</span>
-          <span>Live government client</span>
-        </div>
       </Section>
-
-      {/* Trust line */}
-      <div className="border-y border-sage-dim/15 bg-forest-light">
-        <Container className="flex flex-col items-start gap-3 py-5 md:flex-row md:items-center md:justify-between">
-          <p className="font-mono-tech text-xs uppercase tracking-[0.12em] text-sage-dim">
-            <span className="text-lime">Government-grade deployment experience —</span>{" "}
-            13 Local Government Areas, live biometric enrollment, real field hardware.
-          </p>
-          <Link
-            href="/work"
-            className="shrink-0 text-sm font-medium text-lime hover:underline"
-          >
-            See the case study →
-          </Link>
-        </Container>
-      </div>
 
       {/* What We Do */}
       <Section tone="dark">
@@ -110,7 +85,7 @@ export default function HomePage() {
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28">
               <Eyebrow index="04">Capabilities</Eyebrow>
-              <h2 className="mt-4 font-heading text-3xl font-semibold text-sage md:text-4xl">
+              <h2 className="mt-4 font-heading text-4xl font-semibold text-sage md:text-5xl">
                 What We Do
               </h2>
               <p className="mt-4 max-w-sm text-sage-dim">
@@ -135,10 +110,10 @@ export default function HomePage() {
                     <Icon name={capability.icon} className="h-5 w-5" />
                   </span>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold text-sage">
+                    <h3 className="font-heading text-xl font-semibold text-sage">
                       {capability.title}
                     </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-sage-dim">
+                    <p className="mt-1.5 text-base leading-relaxed text-sage-dim">
                       {capability.description}
                     </p>
                   </div>
@@ -156,7 +131,7 @@ export default function HomePage() {
       {/* Featured case study */}
       <Section tone="dark" className="bg-forest-light">
         <Eyebrow index="01">Proof of capacity</Eyebrow>
-        <h2 className="mt-4 max-w-2xl font-heading text-3xl font-semibold text-sage md:text-4xl">
+        <h2 className="mt-4 max-w-2xl font-heading text-4xl font-semibold text-sage md:text-5xl">
           Built and still standing under real institutional pressure
         </h2>
         <div className="mt-12">
@@ -169,7 +144,7 @@ export default function HomePage() {
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">
             <Eyebrow index="10">Design directions</Eyebrow>
-            <h2 className="mt-4 font-heading text-3xl font-semibold text-sage md:text-4xl">
+            <h2 className="mt-4 font-heading text-4xl font-semibold text-sage md:text-5xl">
               See how it could look for your industry
             </h2>
             <p className="mt-3 text-sage-dim">
@@ -204,7 +179,7 @@ export default function HomePage() {
       {/* Process */}
       <Section tone="dark" className="bg-forest-light">
         <Eyebrow index="04">How we work</Eyebrow>
-        <h2 className="mt-4 font-heading text-3xl font-semibold text-sage md:text-4xl">
+        <h2 className="mt-4 font-heading text-4xl font-semibold text-sage md:text-5xl">
           How a project actually runs
         </h2>
         <div className="relative mt-14">
@@ -218,10 +193,10 @@ export default function HomePage() {
                 <p className="mt-5 font-mono-tech text-[11px] uppercase tracking-[0.12em] text-sage-dim/70">
                   {step.step}
                 </p>
-                <h3 className="mt-1 font-heading text-lg font-semibold text-sage">
+                <h3 className="mt-1 font-heading text-xl font-semibold text-sage">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-sage-dim">
+                <p className="mt-2 text-base leading-relaxed text-sage-dim">
                   {step.description}
                 </p>
               </div>
@@ -236,7 +211,7 @@ export default function HomePage() {
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <Eyebrow>Next step</Eyebrow>
-              <h2 className="mt-4 font-heading text-2xl font-semibold text-sage md:text-3xl">
+              <h2 className="mt-4 font-heading text-3xl font-semibold text-sage md:text-4xl">
                 Have a system that needs to work? Let&apos;s talk.
               </h2>
               <p className="mt-2 max-w-xl text-sage-dim">
