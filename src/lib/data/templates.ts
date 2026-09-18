@@ -216,6 +216,26 @@ export const templates: TemplateEntry[] = [
     mockupUrl: "/templates/mockups/education-brutalist.html",
     style: "Neo-Brutalist",
   },
+  {
+    slug: "fashion-brutalist",
+    category: "fashion",
+    categoryLabel: "Fashion",
+    title: "Clothes that don't ask permission",
+    description: "For independent fashion brands positioning against seasonal trend cycles.",
+    personality: "Neo-brutalist: acid yellow accent, sold-out product stickers.",
+    mockupUrl: "/templates/mockups/fashion-brutalist.html",
+    style: "Neo-Brutalist",
+  },
+  {
+    slug: "cosmetics-brutalist",
+    category: "cosmetics",
+    categoryLabel: "Cosmetics",
+    title: "Skincare with nothing to hide",
+    description: "For skincare brands positioning against vague, buzzword-heavy ingredient marketing.",
+    personality: "Neo-brutalist: lime accent, ingredient percentages as blunt data.",
+    mockupUrl: "/templates/mockups/cosmetics-brutalist.html",
+    style: "Neo-Brutalist",
+  },
 
   // Neumorphic (Soft UI) direction — one per category, including the two new
   // Fashion and Cosmetics categories. Extruded shapes molded from a single
