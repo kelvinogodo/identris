@@ -101,4 +101,119 @@ export const templates: TemplateEntry[] = [
     personality: "Structured and approachable, making programs and enrollment easy to find.",
     mockupUrl: "/templates/mockups/education.html",
   },
+
+  // Neo-Brutalist direction — one alternate art direction per category: thick
+  // black borders, hard offset shadows, zero border-radius, one loud accent
+  // color, blocky uppercase type. A deliberate contrast to the default set.
+  {
+    slug: "ecommerce-brutalist",
+    category: "ecommerce",
+    categoryLabel: "E-commerce",
+    title: "Loud, limited, sold out fast",
+    description:
+      "For streetwear and drop-based brands. Hard shadows, thick borders, and scarcity built into the layout itself.",
+    personality: "Neo-brutalist: raw borders, hard offset shadows, one loud accent color.",
+    mockupUrl: "/templates/mockups/ecommerce-brutalist.html",
+    style: "Neo-Brutalist",
+  },
+  {
+    slug: "legal-brutalist",
+    category: "legal",
+    categoryLabel: "Legal Firms",
+    title: "Blunt, transparent, no jargon",
+    description:
+      "For legal services positioning themselves as the plain-English alternative to stuffy firms.",
+    personality:
+      "Neo-brutalist: thick black borders and hard shadows applied to a legal brand that wants to feel direct, not traditional.",
+    mockupUrl: "/templates/mockups/legal-brutalist.html",
+    style: "Neo-Brutalist",
+  },
+  {
+    slug: "government-brutalist",
+    category: "government",
+    categoryLabel: "Government",
+    title: "Civic tech, rebuilt loud",
+    description:
+      "For government digital services that want to feel modern and legible rather than bureaucratic.",
+    personality: "Neo-brutalist: bold color blocks and high-contrast status indicators for maximum clarity.",
+    mockupUrl: "/templates/mockups/government-brutalist.html",
+    style: "Neo-Brutalist",
+  },
+  {
+    slug: "logistics-brutalist",
+    category: "logistics",
+    categoryLabel: "Courier & Logistics",
+    title: "Blunt ETAs, zero excuses",
+    description:
+      "For couriers who want their reliability to be the whole brand, stated plainly.",
+    personality: "Neo-brutalist: raw structure and a terminal-style tracking widget.",
+    mockupUrl: "/templates/mockups/logistics-brutalist.html",
+    style: "Neo-Brutalist",
+  },
+  {
+    slug: "healthcare-brutalist",
+    category: "healthcare",
+    categoryLabel: "Healthcare",
+    title: "Direct, fast, no waitlist",
+    description:
+      "For modern health and wellness brands speaking to a younger, skeptical audience.",
+    personality: "Neo-brutalist: loud accent blocks against an off-white paper background.",
+    mockupUrl: "/templates/mockups/healthcare-brutalist.html",
+    style: "Neo-Brutalist",
+  },
+  {
+    slug: "real-estate-brutalist",
+    category: "real-estate",
+    categoryLabel: "Real Estate",
+    title: "Real prices, no games",
+    description:
+      "For real estate brands positioning against inflated listings and vague pricing.",
+    personality: "Neo-brutalist: hard-shadowed listing cards and blunt, specific copy.",
+    mockupUrl: "/templates/mockups/real-estate-brutalist.html",
+    style: "Neo-Brutalist",
+  },
+  {
+    slug: "ngo-brutalist",
+    category: "ngo",
+    categoryLabel: "NGOs & Nonprofits",
+    title: "Protest-poster honest",
+    description:
+      "For advocacy-driven nonprofits that want urgency over polish.",
+    personality: "Neo-brutalist: poster-style stickers on stark black-and-white with one loud accent.",
+    mockupUrl: "/templates/mockups/ngo-brutalist.html",
+    style: "Neo-Brutalist",
+  },
+  {
+    slug: "hospitality-brutalist",
+    category: "hospitality",
+    categoryLabel: "Restaurants & Hospitality",
+    title: "Concrete floors, serious food",
+    description:
+      "For restaurants and bars leaning into an industrial, unpretentious room.",
+    personality: "Neo-brutalist: raw borders and a terminal-green kitchen note.",
+    mockupUrl: "/templates/mockups/hospitality-brutalist.html",
+    style: "Neo-Brutalist",
+  },
+  {
+    slug: "saas-brutalist",
+    category: "saas",
+    categoryLabel: "SaaS & Tech Startups",
+    title: "Ship it, skip the meeting",
+    description:
+      "For developer tools speaking directly to engineers, not procurement.",
+    personality: "Neo-brutalist: terminal aesthetics, hard shadows, zero soft edges.",
+    mockupUrl: "/templates/mockups/saas-brutalist.html",
+    style: "Neo-Brutalist",
+  },
+  {
+    slug: "education-brutalist",
+    category: "education",
+    categoryLabel: "Education",
+    title: "Skip the degree, build the portfolio",
+    description:
+      "For bootcamps and alternative education brands positioning against traditional universities.",
+    personality: "Neo-brutalist: bold stickers, blunt outcomes data, zero decoration.",
+    mockupUrl: "/templates/mockups/education-brutalist.html",
+    style: "Neo-Brutalist",
+  },
 ];

@@ -95,9 +95,16 @@ export function TemplateGallery({ templates }: { templates: TemplateEntry[] }) {
               </button>
             </Frame>
             <div className="pt-5">
-              <p className="font-mono-tech text-[11px] uppercase tracking-[0.15em] text-lime">
-                {template.categoryLabel}
-              </p>
+              <div className="flex flex-wrap items-center gap-2">
+                <p className="font-mono-tech text-[11px] uppercase tracking-[0.15em] text-lime">
+                  {template.categoryLabel}
+                </p>
+                {template.style && (
+                  <span className="notch-xs border border-sage-dim/40 px-1.5 py-0.5 font-mono-tech text-[10px] uppercase tracking-[0.1em] text-sage-dim">
+                    {template.style}
+                  </span>
+                )}
+              </div>
               <h3 className="mt-1.5 font-heading text-lg font-semibold text-sage">
                 {template.title}
               </h3>
@@ -138,9 +145,16 @@ export function TemplateGallery({ templates }: { templates: TemplateEntry[] }) {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="font-mono-tech text-[11px] uppercase tracking-[0.15em] text-lime">
-                  {preview.categoryLabel}
-                </p>
+                <div className="flex flex-wrap items-center gap-2">
+                  <p className="font-mono-tech text-[11px] uppercase tracking-[0.15em] text-lime">
+                    {preview.categoryLabel}
+                  </p>
+                  {preview.style && (
+                    <span className="notch-xs border border-sage-dim/40 px-1.5 py-0.5 font-mono-tech text-[10px] uppercase tracking-[0.1em] text-sage-dim">
+                      {preview.style}
+                    </span>
+                  )}
+                </div>
                 <h2 className="mt-1.5 font-heading text-2xl font-semibold text-sage">
                   {preview.title}
                 </h2>

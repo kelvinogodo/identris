@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BLOCK. — Neo-Brutalist Direction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f3ee;--ink:#0a0a0a;--accent:#FF3B30;--line:#0a0a0a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:400 16px/1.55 Inter,sans-serif;color:var(--ink);background:var(--bg)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:28px}
+h1,h2,h3{font-family:'Archivo Black',sans-serif;text-transform:uppercase;line-height:1.02;letter-spacing:-0.01em}
+.mono{font-family:'Space Mono',monospace}
+.hard{border:3px solid var(--line);box-shadow:7px 7px 0 var(--line);background:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--ink);font:800 14px/1 Inter;text-transform:uppercase;letter-spacing:.02em;padding:16px 26px;border:3px solid var(--line);box-shadow:6px 6px 0 var(--line);transition:transform .1s,box-shadow .1s}
+.btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--line)}
+.btn.dark{background:var(--ink);color:#fff}
+.sticker{display:inline-block;background:var(--accent);border:3px solid var(--line);padding:6px 14px;font:800 11px/1 'Space Mono';text-transform:uppercase;letter-spacing:.1em;transform:rotate(-3deg);box-shadow:4px 4px 0 var(--line)}
+nav{border-bottom:4px solid var(--line);background:#fff}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:82px}
+.logo{font-family:'Archivo Black';font-size:22px;text-transform:uppercase}
+.navlinks{display:flex;gap:30px;font:800 13px/1 Inter;text-transform:uppercase;letter-spacing:.03em}
+.menu-btn{display:none;background:var(--ink);color:#fff;border:3px solid var(--line);padding:9px 14px;font:800 12px 'Space Mono';text-transform:uppercase}
+.hero{padding-block:64px 56px;border-bottom:4px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.hero h1{font-size:clamp(34px,5.2vw,64px);margin:18px 0 20px}
+.hero h1 mark{background:var(--accent);color:var(--ink);padding:0 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero p{font-size:17px;max-width:46ch;margin-bottom:28px;font-weight:600}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-panel{background:var(--accent);border:3px solid var(--line);box-shadow:8px 8px 0 var(--line);padding:26px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between}
+.hero-panel .big{font-family:'Archivo Black';font-size:48px}
+.hero-panel .cap{font:800 11px/1.3 'Space Mono';text-transform:uppercase;letter-spacing:.08em}
+.section{padding-block:64px;border-bottom:4px solid var(--line)}
+.section h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:36px}
+.section h2 span{background:var(--ink);color:#fff;padding:2px 10px;display:inline-block;margin-bottom:6px}
+.testimonial{background:var(--ink);color:#fff;padding:52px;border:3px solid var(--line);box-shadow:8px 8px 0 var(--accent)}
+.testimonial p{font-family:'Archivo Black';font-size:clamp(20px,2.6vw,30px);text-transform:none;line-height:1.25;margin-bottom:20px}
+.testimonial .who{font:700 13px/1 'Space Mono';color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+footer{border-top:0;padding:52px 0 0;background:var(--ink);color:#fff}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;padding-bottom:36px}
+.foot-grid h4{font:800 12px/1 'Space Mono';text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:16px}
+.foot-grid li{margin-bottom:10px;font-size:14px}
+.foot-bottom{border-top:3px solid #fff;padding:20px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font:700 12px/1 'Space Mono';text-transform:uppercase;letter-spacing:.04em}
+@media (max-width:720px){
+  .hero-grid{grid-template-columns:1fr}
+  .navlinks{display:none}
+  .menu-btn{display:block}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+
+</style>
+</head>
+<body>
+<nav><div class="wrap navrow">
+  <div class="logo">BLOCK.</div>
+  <ul class="navlinks"><li>Buy</li><li>Rent</li><li>Sell</li></ul>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="#" class="btn">View Listings</a>
+    <button class="menu-btn">Menu</button>
+  </div>
+</div></nav>
+
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="sticker">No Fluff Listings</span>
+    <h1>Real prices. <mark>Real photos. No games.</mark></h1>
+    <p>Every listing shows the actual price, the actual condition, and the actual commute time. That's it.</p>
+    <div class="hero-cta"><a href="#" class="btn">View Listings</a><a href="#" class="btn dark">Learn More</a></div>
+  </div>
+  <div class="hero-panel">
+    <div class="cap">Avg Time to Close</div>
+    <div class="big">31</div>
+    <div class="cap">Days, start to keys</div>
+  </div>
+</div></section>
+
+
+<section class="section"><div class="wrap">
+  <h2><span>Currently Listed</span></h2>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+    <div class="hard" style="padding:0"><div style="aspect-ratio:4/3;background:#FF3B30;border-bottom:3px solid #0a0a0a"></div><div style="padding:18px"><div style="font:800 20px 'Archivo Black'">₦85M</div><div style="margin-top:6px;font-weight:700">4-Bed Villa, Ikoyi</div><div class="mono" style="font-size:12px;margin-top:6px">4 BD · 5 BA · 420M²</div></div></div>
+    <div class="hard" style="padding:0"><div style="aspect-ratio:4/3;background:#0a0a0a;border-bottom:3px solid #0a0a0a"></div><div style="padding:18px"><div style="font:800 20px 'Archivo Black'">₦52M</div><div style="margin-top:6px;font-weight:700">3-Bed Terrace, Lekki</div><div class="mono" style="font-size:12px;margin-top:6px">3 BD · 3 BA · 260M²</div></div></div>
+    <div class="hard" style="padding:0"><div style="aspect-ratio:4/3;background:#fff;border-bottom:3px solid #0a0a0a"></div><div style="padding:18px"><div style="font:800 20px 'Archivo Black'">₦120M</div><div style="margin-top:6px;font-weight:700">Waterfront Duplex, VI</div><div class="mono" style="font-size:12px;margin-top:6px">5 BD · 6 BA · 510M²</div></div></div>
+  </div>
+</div></section>
+
+<section class="section" style="border-bottom:0"><div class="wrap">
+  <div class="testimonial">
+    <p>"Every other agent I called quoted a 'starting price.' Block. quoted the real number and it matched what I paid."</p>
+    <div class="who">Buyer, Lekki Duplex</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><h4>Block.</h4><p style="max-width:30ch;opacity:.85">Residential property listings with real prices and zero games.</p></div>
+    <div><h4>Explore</h4><ul><li>Buy</li><li>Rent</li><li>Sell</li></ul></div>
+    <div><h4>Company</h4><ul><li>Our Agents</li><li>About</li><li>Careers</li></ul></div>
+    <div><h4>Contact</h4><ul><li>Lagos, Nigeria</li><li>+234 1 456 7890</li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© BLOCK. — illustrative design direction, built by Identris.</span>
+    <span>Every price is the real price</span>
+  </div>
+</div></footer>
+</body>
+</html>

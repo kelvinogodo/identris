@@ -43,4 +43,6 @@ export type TemplateEntry = {
   personality: string;
   /** Path to the real, self-contained mockup page under /public/templates/mockups/. */
   mockupUrl: string;
+  /** Art direction label shown as a badge when a category has more than one style, e.g. "Neo-Brutalist". */
+  style?: string;
 };
