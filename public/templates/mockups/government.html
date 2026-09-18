@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>State Digital Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#12203a;--muted:#5b6b85;--line:#d8e0ec;--panel:#eef2f8;--accent:#1d4e89}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:400 16px/1.6 'Source Sans 3',sans-serif;color:var(--ink);background:var(--bg)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1080px;margin-inline:auto;padding-inline:32px}
+h1,h2{font-weight:700;letter-spacing:-0.01em}
+.util{background:var(--accent);color:#fff;font-size:12.5px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:34px}
+nav{border-bottom:1px solid var(--line)}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:10px;font:700 18px/1 'Source Sans 3'}
+.seal{width:32px;height:32px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700}
+.navlinks{display:flex;gap:30px;font:600 14px/1}
+.hero{padding-block:76px 56px;text-align:center}
+.hero h1{font-size:44px;line-height:1.15;max-width:20ch;margin:0 auto 16px}
+.hero p{color:var(--muted);max-width:52ch;margin:0 auto 32px}
+.search{display:flex;max-width:560px;margin:0 auto;border:2px solid var(--accent);border-radius:4px;overflow:hidden}
+.search input{flex:1;border:0;padding:16px;font:inherit}
+.search button{background:var(--accent);color:#fff;border:0;padding:0 24px;font:700 14px}
+.section{padding-block:64px;border-top:1px solid var(--line)}
+.section h2{font-size:26px;margin-bottom:36px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.svc{background:var(--panel);border:1px solid var(--line);padding:28px 22px;border-radius:4px}
+.svc .icon{width:40px;height:40px;background:var(--accent);border-radius:4px;margin-bottom:16px}
+.svc h3{font-size:16px;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:13.5px}
+.announce{border-top:1px solid var(--line)}
+.announce li{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.announce .date{font:700 12px/1;color:var(--accent);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.announce .title{font-weight:600}
+footer{background:var(--ink);color:#cdd8ea;padding:40px 0;font-size:13px}
+.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+.footgrid h4{color:#fff;font-size:13px;margin-bottom:12px}
+.footgrid li{margin-bottom:8px;opacity:.85}
+@media (max-width:720px){
+  .hero h1{font-size:30px}
+  .services{grid-template-columns:1fr 1fr}
+  .navlinks{display:none}
+  .footgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="util"><div class="wrap">An official digital service · English ▾</div></div>
+<nav><div class="wrap navrow">
+  <div class="brand"><span class="seal">SDS</span> State Digital Services</div>
+  <ul class="navlinks"><li>Services</li><li>Agencies</li><li>News</li><li>Help</li></ul>
+</div></nav>
+
+<section class="hero"><div class="wrap">
+  <h1>Government services, simplified.</h1>
+  <p>Apply, renew, and pay for public services online — no queues, no paperwork, tracked from start to finish.</p>
+  <div class="search"><input placeholder="Search for a service — e.g. renew ID, pay tax"><button>Search</button></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2>Popular Services</h2>
+  <div class="services">
+    <div class="svc"><div class="icon"></div><h3>Apply for a Permit</h3><p>Business, construction, and event permits.</p></div>
+    <div class="svc"><div class="icon"></div><h3>Renew Identification</h3><p>National ID and resident registration renewal.</p></div>
+    <div class="svc"><div class="icon"></div><h3>Pay Taxes Online</h3><p>State tax, levies, and utility payments.</p></div>
+    <div class="svc"><div class="icon"></div><h3>Report an Issue</h3><p>Roads, utilities, and public safety concerns.</p></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2>Latest Announcements</h2>
+  <ul class="announce">
+    <li><span class="date">12 Mar</span><span class="title">Online tax payment portal now open for Q1 filings</span></li>
+    <li><span class="date">04 Mar</span><span class="title">Extended office hours for identification renewals this month</span></li>
+    <li><span class="date">21 Feb</span><span class="title">New business permit category launched for home-based businesses</span></li>
+  </ul>
+</div></section>
+
+<footer><div class="wrap footgrid">
+  <div><h4>State Digital Services</h4><p style="opacity:.75;max-width:36ch">Committed to accessible, plain-language public services for every resident.</p></div>
+  <div><h4>Agencies</h4><ul><li>Revenue Service</li><li>Civil Registry</li><li>Public Works</li></ul></div>
+  <div><h4>Help</h4><ul><li>Accessibility</li><li>Contact Support</li><li>FAQs</li></ul></div>
+</div></footer>
+</body>
+</html>

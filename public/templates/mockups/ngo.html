@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bright Future Foundation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--cream:#fdf3ee;--ink:#2b2320;--muted:#a98d80;--line:#f1e2da;--accent:#e76f51}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:400 16px/1.65 Inter,sans-serif;color:var(--ink);background:var(--bg)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:32px}
+h1,h2,h3{font-family:Poppins,sans-serif;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font:600 14px/1 Poppins;padding:15px 28px;border-radius:100px}
+.btn.outline{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+nav{border-bottom:1px solid var(--line)}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{font:600 19px/1 Poppins}
+.navlinks{display:flex;gap:28px;font:500 14px/1 Inter}
+.hero{padding-block:70px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:44px;line-height:1.15;margin-bottom:18px}
+.hero p{color:var(--muted);margin-bottom:28px;max-width:42ch}
+.hero-art{aspect-ratio:4/3;border-radius:20px;background:linear-gradient(155deg,#fbdcc9,#f3a583)}
+.impact{background:var(--cream);padding-block:56px}
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.impact .num{font:600 36px/1 Poppins;color:var(--accent)}
+.impact .label{color:var(--muted);font-size:13px;margin-top:8px}
+.section{padding-block:76px}
+.section h2{font-size:30px;margin-bottom:36px;text-align:center}
+.programs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.prog{border:1px solid var(--line);border-radius:20px;padding:30px 26px}
+.prog .icon{width:44px;height:44px;background:var(--accent);border-radius:50%;margin-bottom:16px}
+.prog h3{font-size:18px;margin-bottom:8px}
+.prog p{color:var(--muted);font-size:14px}
+.donate{background:var(--ink);color:#fff;border-radius:24px;padding:48px;text-align:center;margin-bottom:0}
+.donate h2{color:#fff;margin-bottom:24px}
+.tiers{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.tier{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:14px 26px;border-radius:100px;font:600 14px Poppins}
+.tier.custom{background:var(--accent);border-color:var(--accent)}
+footer{padding:44px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;flex-wrap:wrap;gap:10px}
+@media (max-width:720px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero h1{font-size:32px}
+  .impact-grid{grid-template-columns:1fr 1fr}
+  .programs{grid-template-columns:1fr}
+  .navlinks{display:none}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap navrow">
+  <div class="logo">Bright Future</div>
+  <ul class="navlinks"><li>Our Work</li><li>Impact</li><li>Get Involved</li><li>News</li></ul>
+  <a href="#" class="btn">Donate</a>
+</div></nav>
+
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <h1>Every child deserves a bright future.</h1>
+    <p>We work with local communities to deliver education, healthcare, and clean water where they're needed most.</p>
+    <a href="#" class="btn">Donate Today</a>
+  </div>
+  <div class="hero-art"></div>
+</div></section>
+
+<div class="impact"><div class="wrap impact-grid">
+  <div><div class="num">12,400</div><div class="label">Children Reached</div></div>
+  <div><div class="num">38</div><div class="label">Communities</div></div>
+  <div><div class="num">9</div><div class="label">Years Active</div></div>
+  <div><div class="num">210</div><div class="label">Volunteers</div></div>
+</div></div>
+
+<section class="section"><div class="wrap">
+  <h2>Our Programs</h2>
+  <div class="programs">
+    <div class="prog"><div class="icon"></div><h3>Education</h3><p>School supplies, scholarships, and literacy programs for underserved children.</p></div>
+    <div class="prog"><div class="icon"></div><h3>Healthcare</h3><p>Mobile clinics and vaccination drives in remote communities.</p></div>
+    <div class="prog"><div class="icon"></div><h3>Clean Water</h3><p>Borehole construction and water safety education.</p></div>
+  </div>
+</div></section>
+
+<section class="section" style="padding-top:0"><div class="wrap donate">
+  <h2>Your gift changes a life today.</h2>
+  <div class="tiers">
+    <span class="tier">₦5,000</span><span class="tier">₦20,000</span><span class="tier">₦50,000</span><span class="tier custom">Custom Amount</span>
+  </div>
+</div></section>
+
+<footer class="wrap">
+  <span>Bright Future Foundation — illustrative design direction, built by Identris.</span>
+  <span>Registered Nonprofit · Nigeria</span>
+</footer>
+</body>
+</html>

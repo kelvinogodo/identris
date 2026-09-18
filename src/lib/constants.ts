@@ -10,6 +10,9 @@ export const siteConfig = {
   location: "Nigeria",
   github: "https://github.com/kelvinogodo",
   cvUrl: "/cv/kelvin-ogodo-cv.pdf", // TODO: drop the real CV PDF into public/cv/
+  // TODO: replace with a real Formspree (or Getform) endpoint — see README.
+  formEndpoint:
+    process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? "https://formspree.io/f/YOUR_FORM_ID",
 };
 
 export type NavLink = {

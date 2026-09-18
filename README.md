@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Identris Systems Limited — Website
 
-## Getting Started
+Frontend-only marketing site for Identris Systems Limited, built with Next.js
+(App Router), TypeScript, and Tailwind CSS. No database, no auth, no backend
+beyond a static form handler on the Contact page.
 
-First, run the development server:
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). Production build:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+- `src/app/*` — one route per page (`/`, `/about`, `/services`, `/work`,
+  `/templates`, `/contact`), plus `sitemap.ts` and `robots.ts`.
+- `src/components/ui/*` — base building blocks: `Button`, `Card`, `Section`,
+  `Container`, `Icon`.
+- `src/components/layout/*` — `Header`, `Footer`, `Logo`, `SocialLinks`.
+- `src/components/CaseStudyCard.tsx` — used on Home (summary) and Work
+  (full write-up); one component, two variants.
+- `src/components/TemplateGallery.tsx` — the filterable grid + preview modal
+  on the Templates page.
+- `src/components/ui/TemplatePreviewFrame.tsx` — renders a live, scaled,
+  non-interactive crop of a mockup page (same technique as a scaled-iframe
+  design gallery) for grid thumbnails.
+- `public/templates/mockups/*.html` — the actual template designs: real,
+  self-contained, responsive HTML/CSS mini-sites (one per industry), not
+  static images. See "Adding a new Templates gallery entry" below.
+- `src/lib/constants.ts` — site-wide config (name, email, CV path, form
+  endpoint, nav links, social links). Start here to update contact details.
+- `src/lib/data/*` — content as data: `services.ts`, `caseStudies.ts`,
+  `templates.ts`, `capabilities.ts`.
+- `src/lib/seo.ts` — per-page metadata helper + JSON-LD Organization schema.
 
-To learn more about Next.js, take a look at the following resources:
+## Things to swap in before launch
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+These are marked with `TODO` comments in the code:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Logo** — `src/components/layout/Logo.tsx` is a placeholder text
+   wordmark. Replace it with the real logo (SVG preferred) once you have the
+   asset files.
+2. **Domain, email, phone** — `src/lib/constants.ts` → `siteConfig`. The
+   `url` field also feeds `metadataBase`, the sitemap, and JSON-LD, so update
+   it before deploying.
+3. **CV PDF** — drop the real file into `public/cv/` named
+   `kelvin-ogodo-cv.pdf` (or update `siteConfig.cvUrl` to match a different
+   filename). Delete `public/cv/PLACE_CV_HERE.txt` once it's in place.
+4. **Contact form endpoint** — see below.
+5. **Default OG/share image** — `public/og/default.svg` is a placeholder.
+   Most platforms (X, Facebook, LinkedIn) require a raster image (PNG/JPG,
+   1200×630) for link previews, not SVG. Export a real one and point
+   `src/lib/seo.ts` (`buildMetadata`'s default `ogImage`) at it, or pass a
+   custom `ogImage` per page.
+6. **Analytics** — off by default. Set `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` or
+   `NEXT_PUBLIC_GA_ID` in `.env.local` to enable (see
+   `src/components/Analytics.tsx`).
+7. **Template gallery mockups** — `public/templates/mockups/*.html` are
+   illustrative but fully real, responsive mini-sites (fictional brand names,
+   placeholder copy). Swap in real client work here over time the same way —
+   see below.
 
-## Deploy on Vercel
+## Changing the contact form endpoint
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The Contact page (`src/app/contact/page.tsx` → `src/components/ContactForm.tsx`)
+posts to `siteConfig.formEndpoint` (in `src/lib/constants.ts`), which reads
+from `NEXT_PUBLIC_FORM_ENDPOINT`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create a form at [Formspree](https://formspree.io) or
+   [Getform](https://getform.io) and copy its endpoint URL.
+2. Add it to `.env.local`:
+   ```
+   NEXT_PUBLIC_FORM_ENDPOINT=https://formspree.io/f/your-form-id
+   ```
+3. Add the same variable in your Vercel project settings for production.
+
+The form submits `name`, `email`, `company`, `project_type`, `message`, and
+(when arriving from the Templates page) a hidden `referenced_template` field.
+
+## Adding a new Work case study
+
+Append an entry to `src/lib/data/caseStudies.ts` following the existing
+`CaseStudy` shape (problem, solution, stack, result, stats, image). It will
+automatically render on `/work` via `CaseStudyCard`. Set `featured: true` on
+at most one entry to control which case study appears on the Home page.
+
+## Adding a new Templates gallery entry
+
+Each template is a real, self-contained HTML/CSS page under
+`public/templates/mockups/`, not a flat image — it's rendered live in the
+gallery (scaled down to fit the card, via `TemplatePreviewFrame`) and
+embedded directly in the "View example" modal, where the desktop pane shows
+it at near-full size and the mobile pane renders it at phone width and lets
+the page's own responsive CSS take over — genuine mobile layout, not a second
+static asset to keep in sync.
+
+To add one:
+
+1. Create `public/templates/mockups/<slug>.html` — a standalone page (inline
+   `<style>`, Google Fonts via `<link>` if needed, no JS required). Give it
+   real nav/hero/content/footer sections and its own `@media (max-width:720px)`
+   rules so the mobile preview actually reflows. Use a fictional brand name
+   and placeholder copy/CSS-drawn shapes instead of real photos.
+2. Append an entry to `src/lib/data/templates.ts` following the
+   `TemplateEntry` shape, pointing `mockupUrl` at that file.
+3. Add its `category` to the `TemplateCategory` union in `src/lib/types.ts`
+   if it's a new category.
+
+The gallery, filters, and preview modal on `/templates` (and the teaser strip
+on Home) pick it up automatically.
+
+## Deploying
+
+Push to a Git repository and import it in [Vercel](https://vercel.com/new).
+No environment variables are required to build; `NEXT_PUBLIC_FORM_ENDPOINT`
+should be set for the contact form to actually deliver messages.

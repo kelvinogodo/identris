@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cortex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--surface:#14141f;--line:#242438;--text:#e6e6f0;--muted:#8b8aa3;--accent:#6c5ce7}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:400 16px/1.6 Inter,sans-serif;color:var(--text);background:var(--bg)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:32px}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+.mono{font-family:'IBM Plex Mono',monospace}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font:600 14px/1 Inter;padding:15px 26px;border-radius:6px}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+nav{border-bottom:1px solid var(--line)}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font:700 20px/1 'Space Grotesk'}
+.navlinks{display:flex;gap:30px;font:500 14px/1 Inter}
+.hero{padding-block:80px 40px;text-align:center}
+.hero h1{font-size:52px;line-height:1.08;max-width:16ch;margin:0 auto 18px}
+.hero p{color:var(--muted);max-width:44ch;margin:0 auto 32px}
+.hero-ctas{display:flex;gap:14px;justify-content:center;margin-bottom:60px}
+.dash{max-width:900px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.dash-bar{display:flex;gap:6px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.dash-bar span{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.dash-body{display:grid;grid-template-columns:160px 1fr;min-height:260px}
+.dash-nav{border-right:1px solid var(--line);padding:20px;display:flex;flex-direction:column;gap:14px}
+.dash-nav div{height:10px;background:var(--line);border-radius:3px;width:80%}
+.dash-nav div.active{background:var(--accent)}
+.dash-main{padding:24px;display:flex;align-items:flex-end;gap:10px}
+.bar{flex:1;background:linear-gradient(180deg,var(--accent),#3d3470);border-radius:4px 4px 0 0}
+.logos{padding-block:44px;text-align:center;border-top:1px solid var(--line)}
+.logos p{color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}
+.logo-row{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;color:var(--muted);font:600 15px 'Space Grotesk'}
+.section{padding-block:76px;border-top:1px solid var(--line)}
+.section h2{font-size:32px;text-align:center;margin-bottom:44px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:26px}
+.feat .icon{width:36px;height:36px;background:var(--accent);border-radius:8px;margin-bottom:16px}
+.feat h3{font-size:17px;margin-bottom:8px}
+.feat p{color:var(--muted);font-size:14px}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:30px}
+.plan.pop{border-color:var(--accent)}
+.plan .tag{display:inline-block;background:var(--accent);color:#fff;font:600 10px 'IBM Plex Mono';padding:4px 10px;border-radius:4px;margin-bottom:14px;letter-spacing:.05em}
+.plan h3{font-size:18px;margin-bottom:6px}
+.plan .price{font:600 32px/1 'Space Grotesk';margin-bottom:18px}
+.plan .price span{font:400 13px Inter;color:var(--muted)}
+.plan ul{display:flex;flex-direction:column;gap:10px;margin-bottom:22px;color:var(--muted);font-size:13.5px}
+footer{border-top:1px solid var(--line);padding:40px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;flex-wrap:wrap;gap:10px}
+@media (max-width:720px){
+  .hero h1{font-size:34px}
+  .dash-body{grid-template-columns:1fr}
+  .dash-nav{display:none}
+  .features,.pricing{grid-template-columns:1fr}
+  .navlinks{display:none}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap navrow">
+  <div class="logo">Cortex</div>
+  <ul class="navlinks"><li>Product</li><li>Pricing</li><li>Docs</li><li>Changelog</li></ul>
+  <a href="#" class="btn">Start Free Trial</a>
+</div></nav>
+
+<section class="hero"><div class="wrap">
+  <h1>Ship product decisions, not guesses.</h1>
+  <p>Real-time analytics and team collaboration in one workspace built for fast-moving product teams.</p>
+  <div class="hero-ctas"><a href="#" class="btn">Start Free Trial</a><a href="#" class="btn ghost">Watch Demo</a></div>
+  <div class="dash">
+    <div class="dash-bar"><span></span><span></span><span></span></div>
+    <div class="dash-body">
+      <div class="dash-nav"><div class="active"></div><div></div><div></div><div></div></div>
+      <div class="dash-main">
+        <div class="bar" style="height:40%"></div><div class="bar" style="height:65%"></div><div class="bar" style="height:50%"></div>
+        <div class="bar" style="height:85%"></div><div class="bar" style="height:60%"></div><div class="bar" style="height:95%"></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<div class="logos"><div class="wrap">
+  <p>Trusted by teams at</p>
+  <div class="logo-row"><span>Northwind</span><span>Fenwick</span><span>Delta Labs</span><span>Oakmont</span></div>
+</div></div>
+
+<section class="section"><div class="wrap">
+  <h2>Built for how teams actually ship</h2>
+  <div class="features">
+    <div class="feat"><div class="icon"></div><h3>Real-Time Analytics</h3><p>See usage and conversion shifts as they happen, not next quarter.</p></div>
+    <div class="feat"><div class="icon"></div><h3>Team Collaboration</h3><p>Comment, assign, and resolve directly on the data.</p></div>
+    <div class="feat"><div class="icon"></div><h3>API-First</h3><p>Every feature in the product is also an endpoint.</p></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2>Simple, transparent pricing</h2>
+  <div class="pricing">
+    <div class="plan"><h3>Starter</h3><div class="price">$19<span>/mo</span></div><ul><li>Up to 3 seats</li><li>Core analytics</li><li>Email support</li></ul><a href="#" class="btn ghost" style="width:100%;justify-content:center">Choose Starter</a></div>
+    <div class="plan pop"><span class="tag">Most Popular</span><h3>Pro</h3><div class="price">$49<span>/mo</span></div><ul><li>Up to 20 seats</li><li>Advanced analytics</li><li>Priority support</li></ul><a href="#" class="btn" style="width:100%;justify-content:center">Choose Pro</a></div>
+    <div class="plan"><h3>Enterprise</h3><div class="price">Custom</div><ul><li>Unlimited seats</li><li>SSO &amp; audit logs</li><li>Dedicated support</li></ul><a href="#" class="btn ghost" style="width:100%;justify-content:center">Talk to Us</a></div>
+  </div>
+</div></section>
+
+<footer class="wrap">
+  <span>Cortex — illustrative design direction, built by Identris.</span>
+  <span class="mono">STATUS: ALL SYSTEMS OPERATIONAL</span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 2100 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="2100" height="900" fill="#001b0c"/>
+
+  <g transform="translate(1050,430)">
+    <!-- Two supporting horses (chargers), simplified silhouettes -->
+    <g fill="#e9ece9">
+      <g transform="translate(-300,10)">
+        <path d="M-40,120 L-30,20 C-34,-10 -20,-40 10,-55 L40,-70 C55,-78 70,-70 68,-52 L58,-30 C70,-25 78,-10 74,10 L60,45 L62,120 L44,120 L40,60 L10,60 L6,120 L-16,120 L-14,58 L-40,120 Z"/>
+        <circle cx="52" cy="-58" r="7"/>
+      </g>
+      <g transform="translate(300,10) scale(-1,1)">
+        <path d="M-40,120 L-30,20 C-34,-10 -20,-40 10,-55 L40,-70 C55,-78 70,-70 68,-52 L58,-30 C70,-25 78,-10 74,10 L60,45 L62,120 L44,120 L40,60 L10,60 L6,120 L-16,120 L-14,58 L-40,120 Z"/>
+        <circle cx="52" cy="-58" r="7"/>
+      </g>
+    </g>
+
+    <!-- Eagle crest above the shield -->
+    <g transform="translate(0,-230)" fill="#c1272d">
+      <path d="M0,-40 C10,-55 30,-58 42,-46 C60,-30 78,-18 100,-14 C82,-4 62,-2 46,-8 C54,4 60,18 58,32 C46,20 34,12 22,10 C26,22 24,36 16,46 C10,32 2,22 -8,18 C-6,32 -12,44 -22,50 C-22,36 -28,24 -38,16 C-46,26 -58,32 -70,32 C-60,20 -54,8 -54,-4 C-70,2 -86,-2 -98,-12 C-78,-16 -60,-26 -46,-42 C-32,-58 -12,-56 0,-40 Z"/>
+    </g>
+    <rect x="-14" y="-190" width="28" height="26" fill="#c1272d"/>
+
+    <!-- Shield -->
+    <g>
+      <path d="M-140,-160 L140,-160 L140,10 C140,110 70,190 0,220 C-70,190 -140,110 -140,10 Z" fill="#111"/>
+      <!-- White pall (Y shape) representing the Niger/Benue confluence -->
+      <path d="M-100,-160 L-14,-20 L-14,190 L14,190 L14,-20 L100,-160 L118,-150 L26,0 L26,205 C18,210 9,214 0,217 C-9,214 -18,210 -26,205 L-26,0 L-118,-150 Z" fill="#f4f4f2"/>
+    </g>
+
+    <!-- Green mound base with national flower motif -->
+    <g transform="translate(0,225)">
+      <path d="M-170,0 C-100,-26 100,-26 170,0 L170,40 L-170,40 Z" fill="#0f7a3d"/>
+      <g fill="#f4f4f2">
+        <circle cx="-110" cy="14" r="5"/>
+        <circle cx="-60" cy="24" r="5"/>
+        <circle cx="0" cy="10" r="5"/>
+        <circle cx="60" cy="24" r="5"/>
+        <circle cx="110" cy="14" r="5"/>
+      </g>
+    </g>
+  </g>
+
+  <text x="1050" y="820" text-anchor="middle" font-family="Georgia, serif" font-size="30" letter-spacing="6" fill="#c7dad4">FEDERAL REPUBLIC OF NIGERIA</text>
+</svg>

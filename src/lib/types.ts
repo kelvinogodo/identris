@@ -39,7 +39,6 @@ export type TemplateEntry = {
   title: string;
   description: string;
   personality: string;
-  thumbnail: string;
-  desktopPreview: string;
-  mobilePreview: string;
+  /** Path to the real, self-contained mockup page under /public/templates/mockups/. */
+  mockupUrl: string;
 };

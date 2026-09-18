@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian Properties</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f4;--ink:#262524;--muted:#8a8377;--line:#e6e1d6;--accent:#b08d57}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:400 16px/1.6 Inter,sans-serif;color:var(--ink);background:var(--bg)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:32px}
+h1,h2,h3{font-family:Fraunces,serif;font-weight:600;letter-spacing:-0.01em}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;font:600 13px/1 Inter;padding:15px 26px;letter-spacing:.02em}
+nav{border-bottom:1px solid var(--line)}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{font:600 22px/1 Fraunces}
+.navlinks{display:flex;gap:30px;font:500 14px/1 Inter}
+.hero{position:relative;aspect-ratio:16/8;background:linear-gradient(160deg,#d9c9a8,#b79b74 55%,#8f7550);display:flex;align-items:flex-end}
+.hero-copy{position:relative;padding:56px;color:#fff;max-width:600px}
+.hero h1{font-size:48px;line-height:1.08;color:#fff}
+.search-card{position:relative;margin-top:-38px;z-index:2}
+.search-inner{background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.12);display:grid;grid-template-columns:1fr 1fr 1fr auto;border:1px solid var(--line)}
+.search-inner div{padding:16px 20px;border-right:1px solid var(--line)}
+.search-inner div:last-child{border-right:0}
+.search-inner label{display:block;font:600 10px/1 Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.search-inner button{background:var(--accent);color:#fff;border:0;font:700 13px;padding:0 28px}
+.section{padding-block:80px}
+.section h2{font-size:30px;margin-bottom:36px}
+.listings{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.listing .img{aspect-ratio:4/3;margin-bottom:14px}
+.listing:nth-child(1) .img{background:linear-gradient(160deg,#e5d6bd,#c7ab84)}
+.listing:nth-child(2) .img{background:linear-gradient(160deg,#d7ded4,#aebba3)}
+.listing:nth-child(3) .img{background:linear-gradient(160deg,#e0d3d6,#c3a3aa)}
+.listing .price{font:600 18px/1 Fraunces;margin-bottom:4px}
+.listing .addr{color:var(--muted);font-size:14px;margin-bottom:10px}
+.listing .meta{display:flex;gap:16px;font-size:13px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:56px}
+.stats .num{font:600 40px/1 Fraunces;color:var(--accent)}
+.stats .label{color:var(--muted);font-size:13px;margin-top:8px}
+.agent{display:flex;align-items:center;gap:28px;padding-block:70px}
+.agent .photo{width:110px;height:110px;border-radius:50%;background:linear-gradient(160deg,#ddd0b8,#b79b74)}
+.agent h3{font-size:22px;margin-bottom:4px}
+.agent .role{color:var(--accent);font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+footer{border-top:1px solid var(--line);padding:40px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;flex-wrap:wrap;gap:10px}
+@media (max-width:720px){
+  .hero h1{font-size:30px}
+  .hero-copy{padding:32px}
+  .search-inner{grid-template-columns:1fr}
+  .search-inner div{border-right:0;border-bottom:1px solid var(--line)}
+  .listings{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .agent{flex-direction:column;text-align:center}
+  .navlinks{display:none}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap navrow">
+  <div class="logo">Meridian</div>
+  <ul class="navlinks"><li>Buy</li><li>Rent</li><li>Sell</li><li>Agents</li></ul>
+  <a href="#" class="btn">Get in Touch</a>
+</div></nav>
+
+<div class="hero"><div class="wrap hero-copy"><h1>Find a home that fits your life.</h1></div></div>
+
+<div class="wrap search-card"><div class="search-inner">
+  <div><label>Location</label>Lekki, Lagos</div>
+  <div><label>Price Range</label>₦40M – ₦120M</div>
+  <div><label>Beds</label>3+</div>
+  <button>Search</button>
+</div></div>
+
+<section class="section"><div class="wrap">
+  <h2>Featured Listings</h2>
+  <div class="listings">
+    <div class="listing"><div class="img"></div><div class="price">₦85,000,000</div><div class="addr">4 Bed Villa, Ikoyi</div><div class="meta"><span>4 bd</span><span>5 ba</span><span>420 m²</span></div></div>
+    <div class="listing"><div class="img"></div><div class="price">₦52,000,000</div><div class="addr">3 Bed Terrace, Lekki</div><div class="meta"><span>3 bd</span><span>3 ba</span><span>260 m²</span></div></div>
+    <div class="listing"><div class="img"></div><div class="price">₦120,000,000</div><div class="addr">Waterfront Duplex, VI</div><div class="meta"><span>5 bd</span><span>6 ba</span><span>510 m²</span></div></div>
+  </div>
+</div></section>
+
+<div class="wrap stats">
+  <div><div class="num">500+</div><div class="label">Properties Sold</div></div>
+  <div><div class="num">15</div><div class="label">Years of Trust</div></div>
+  <div><div class="num">4.9★</div><div class="label">Client Rating</div></div>
+</div>
+
+<div class="wrap agent">
+  <div class="photo"></div>
+  <div>
+    <h3>Chidinma Falade</h3>
+    <div class="role">Senior Agent</div>
+    <a href="#" class="btn">Contact Chidinma</a>
+  </div>
+</div>
+
+<footer class="wrap">
+  <span>Meridian Properties — illustrative design direction, built by Identris.</span>
+  <span>Lagos, Nigeria</span>
+</footer>
+</body>
+</html>

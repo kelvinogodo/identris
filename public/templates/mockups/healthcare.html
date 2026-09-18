@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nimbus Health Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--mint:#eef8f6;--ink:#153b3a;--muted:#6b8c89;--line:#dcece9;--accent:#2a9d8f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:400 16px/1.65 'Work Sans',sans-serif;color:var(--ink);background:var(--bg)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1100px;margin-inline:auto;padding-inline:32px}
+h1,h2,h3{font-weight:700;letter-spacing:-0.01em}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font:600 14px/1;padding:15px 28px;border-radius:100px}
+.btn.outline{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+nav{border-bottom:1px solid var(--line)}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{font:700 20px/1}
+.navlinks{display:flex;gap:30px;font:500 14px/1}
+.hero{position:relative;padding-block:90px;overflow:hidden}
+.blob{position:absolute;top:-120px;right:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,var(--mint),transparent 70%)}
+.hero-inner{position:relative;text-align:center;max-width:640px;margin:0 auto}
+.hero h1{font-size:48px;line-height:1.1;margin-bottom:18px}
+.hero p{color:var(--muted);font-size:17px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.section{padding-block:70px;border-top:1px solid var(--line)}
+.section h2{font-size:30px;text-align:center;margin-bottom:44px}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.svc{background:var(--mint);border-radius:16px;padding:28px 22px}
+.svc .icon{width:44px;height:44px;background:var(--accent);border-radius:50%;margin-bottom:16px}
+.svc h3{font-size:16px;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:13.5px}
+.docs{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;text-align:center}
+.avatar{width:80px;height:80px;border-radius:50%;background:var(--mint);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:600 20px/1;color:var(--accent);margin:0 auto 14px}
+.docs h3{font-size:16px;margin-bottom:4px}
+.docs .spec{color:var(--accent);font-size:13px;font-weight:600}
+.quote{max-width:620px;margin:0 auto;text-align:center;font-size:22px;font-style:italic;line-height:1.5;color:var(--ink)}
+.quote .by{margin-top:20px;font:600 14px/1 'Work Sans';font-style:normal;color:var(--muted)}
+footer{background:var(--mint);padding:44px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13.5px;flex-wrap:wrap;gap:12px}
+@media (max-width:720px){
+  .hero h1{font-size:32px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .docs{grid-template-columns:1fr}
+  .navlinks{display:none}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap navrow">
+  <div class="logo">Nimbus Health</div>
+  <ul class="navlinks"><li>Services</li><li>Doctors</li><li>Patients</li><li>Contact</li></ul>
+  <a href="#" class="btn">Book Appointment</a>
+</div></nav>
+
+<section class="hero"><div class="blob"></div><div class="wrap hero-inner">
+  <h1>Care that puts you first.</h1>
+  <p>Same-week appointments, clear pricing, and a team that explains things in plain language.</p>
+  <div class="hero-ctas"><a href="#" class="btn">Book an Appointment</a><a href="#" class="btn outline">Our Services</a></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2>Services</h2>
+  <div class="svc-grid">
+    <div class="svc"><div class="icon"></div><h3>General Medicine</h3><p>Checkups, screenings, and everyday care.</p></div>
+    <div class="svc"><div class="icon"></div><h3>Pediatrics</h3><p>Gentle, attentive care for children of all ages.</p></div>
+    <div class="svc"><div class="icon"></div><h3>Dental Care</h3><p>Preventive and restorative dentistry.</p></div>
+    <div class="svc"><div class="icon"></div><h3>Diagnostics</h3><p>Lab testing and imaging, results within 24 hours.</p></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2>Meet the Doctors</h2>
+  <div class="docs">
+    <div><div class="avatar">A.O.</div><h3>Dr. Amara Obi</h3><div class="spec">General Medicine</div></div>
+    <div><div class="avatar">T.K.</div><h3>Dr. Tunde Kalu</h3><div class="spec">Pediatrics</div></div>
+    <div><div class="avatar">F.E.</div><h3>Dr. Funke Eze</h3><div class="spec">Dental Care</div></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <p class="quote">"The first clinic where I didn't feel rushed. They explained every result and follow-up step clearly."<div class="by">— Patient, 3 years with Nimbus</div></p>
+</div></section>
+
+<footer class="wrap">
+  <span>Nimbus Health Clinic — illustrative design direction, built by Identris.</span>
+  <span>Mon–Sat, 8am–7pm · Lagos</span>
+</footer>
+</body>
+</html>

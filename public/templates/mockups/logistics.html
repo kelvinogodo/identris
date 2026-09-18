@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swiftlane Logistics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f172a;--surface:#16213a;--line:#26324a;--text:#e7ecf5;--muted:#7b88a3;--accent:#f2994a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:400 16px/1.6 Inter,sans-serif;color:var(--text);background:var(--bg)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:32px}
+h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.01em}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#1a1206;font:700 14px/1 Inter;padding:15px 26px;border-radius:2px}
+nav{border-bottom:1px solid var(--line)}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font:700 26px/1 'Barlow Condensed'}
+.navlinks{display:flex;gap:32px;font:500 14px/1 Inter}
+.hero{padding-block:80px}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:52px;line-height:1}
+.hero p{color:var(--muted);max-width:42ch;margin:18px 0 28px}
+.track{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:2px;overflow:hidden;max-width:440px}
+.track input{flex:1;background:transparent;border:0;padding:16px;color:var(--text);font:inherit}
+.track button{background:var(--accent);border:0;color:#1a1206;font:700 13px;padding:0 20px}
+.route{position:relative;height:220px}
+.route .line{position:absolute;top:50%;left:20px;right:20px;border-top:2px dashed var(--muted)}
+.node{position:absolute;top:50%;transform:translateY(-50%);text-align:center}
+.node .dot{width:14px;height:14px;border-radius:50%;background:var(--accent);margin:0 auto 10px}
+.node span{font:600 11px/1 Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.n1{left:20px}.n2{left:50%;transform:translate(-50%,-50%)}.n3{right:20px;text-align:right}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-block:56px;border-top:1px solid var(--line);text-align:center}
+.stats .num{font:700 40px/1 'Barlow Condensed';color:var(--accent)}
+.stats .label{color:var(--muted);font-size:12.5px;margin-top:8px;text-transform:uppercase;letter-spacing:.05em}
+.services{padding-block:64px;border-top:1px solid var(--line)}
+.services h2{font-size:30px;margin-bottom:36px}
+.svc-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc{background:var(--surface);border:1px solid var(--line);padding:28px}
+.svc .icon{width:36px;height:36px;background:var(--accent);margin-bottom:18px}
+.svc h3{font-size:20px;margin-bottom:8px;letter-spacing:0}
+.svc p{color:var(--muted);font-size:14px}
+footer{border-top:1px solid var(--line);padding:36px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;flex-wrap:wrap;gap:10px}
+@media (max-width:720px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero h1{font-size:36px}
+  .stats{grid-template-columns:1fr 1fr}
+  .svc-row{grid-template-columns:1fr}
+  .navlinks{display:none}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap navrow">
+  <div class="logo">SWIFTLANE</div>
+  <ul class="navlinks"><li>Services</li><li>Track</li><li>Coverage</li><li>Business</li></ul>
+  <a href="#" class="btn">Get a Quote</a>
+</div></nav>
+
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <h1>Your shipment, tracked end to end.</h1>
+    <p>Same-day and cross-border delivery with live tracking from pickup to doorstep.</p>
+    <div class="track"><input placeholder="Enter tracking number"><button>Track</button></div>
+  </div>
+  <div class="route">
+    <div class="line"></div>
+    <div class="node n1"><div class="dot"></div><span>Origin</span></div>
+    <div class="node n2"><div class="dot"></div><span>Hub</span></div>
+    <div class="node n3"><div class="dot"></div><span>Destination</span></div>
+  </div>
+</div></section>
+
+<div class="wrap stats">
+  <div><div class="num">2M+</div><div class="label">Parcels / Year</div></div>
+  <div><div class="num">48</div><div class="label">Countries</div></div>
+  <div><div class="num">98.6%</div><div class="label">On-Time Rate</div></div>
+  <div><div class="num">24/7</div><div class="label">Support</div></div>
+</div>
+
+<section class="services"><div class="wrap">
+  <h2>What We Move</h2>
+  <div class="svc-row">
+    <div class="svc"><div class="icon"></div><h3>Express Delivery</h3><p>Same-day and next-day delivery within major metro areas.</p></div>
+    <div class="svc"><div class="icon"></div><h3>Freight &amp; Cargo</h3><p>Bulk and palletized freight across regional and international routes.</p></div>
+    <div class="svc"><div class="icon"></div><h3>Warehousing</h3><p>Short and long-term storage with inventory tracking built in.</p></div>
+  </div>
+</div></section>
+
+<footer class="wrap">
+  <span>Swiftlane Logistics — illustrative design direction, built by Identris.</span>
+  <span>Lagos · Accra · Nairobi</span>
+</footer>
+</body>
+</html>
