@@ -18,6 +18,8 @@ export type CaseStudy = {
   stats: { label: string; value: string }[];
   featured: boolean;
   image: string;
+  /** "contain" for symbolic/emblem art that must never be cropped; "cover" (default) for photos. */
+  imageFit?: "cover" | "contain";
 };
 
 export type TemplateCategory =

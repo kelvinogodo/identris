@@ -43,13 +43,25 @@ nav{border-bottom:1px solid var(--line)}
 .svc .icon{width:36px;height:36px;background:var(--accent);margin-bottom:18px}
 .svc h3{font-size:20px;margin-bottom:8px;letter-spacing:0}
 .svc p{color:var(--muted);font-size:14px}
-footer{border-top:1px solid var(--line);padding:36px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;flex-wrap:wrap;gap:10px}
+.testimonial{background:var(--surface);border:1px solid var(--line);padding:44px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.testimonial .mark{font:700 64px/1 'Barlow Condensed';color:var(--accent)}
+.testimonial p{font-size:18px;line-height:1.6;margin-bottom:14px}
+.testimonial .who{font:600 13px/1 Inter;color:var(--accent);text-transform:uppercase;letter-spacing:.04em}
+footer{border-top:1px solid var(--line);padding:56px 0 28px;color:var(--muted);font-size:13px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:36px}
+.foot-grid h4{font:600 12px/1 Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin-bottom:14px}
+.foot-grid li{margin-bottom:9px}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:20px;border-top:1px solid var(--line)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:9px 14px;font:600 12px Inter}
 @media (max-width:720px){
   .hero-grid{grid-template-columns:1fr}
   .hero h1{font-size:36px}
   .stats{grid-template-columns:1fr 1fr}
   .svc-row{grid-template-columns:1fr}
+  .testimonial{grid-template-columns:1fr;text-align:center}
+  .foot-grid{grid-template-columns:1fr 1fr}
   .navlinks{display:none}
+  .menu-btn{display:block}
 }
 </style>
 </head>
@@ -57,7 +69,10 @@ footer{border-top:1px solid var(--line);padding:36px 0;display:flex;justify-cont
 <nav><div class="wrap navrow">
   <div class="logo">SWIFTLANE</div>
   <ul class="navlinks"><li>Services</li><li>Track</li><li>Coverage</li><li>Business</li></ul>
-  <a href="#" class="btn">Get a Quote</a>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="#" class="btn">Get a Quote</a>
+    <button class="menu-btn">Menu</button>
+  </div>
 </div></nav>
 
 <section class="hero"><div class="wrap hero-grid">
@@ -90,9 +105,27 @@ footer{border-top:1px solid var(--line);padding:36px 0;display:flex;justify-cont
   </div>
 </div></section>
 
-<footer class="wrap">
-  <span>Swiftlane Logistics — illustrative design direction, built by Identris.</span>
-  <span>Lagos · Accra · Nairobi</span>
-</footer>
+<section class="services"><div class="wrap">
+  <div class="testimonial">
+    <div class="mark">"</div>
+    <div>
+      <p>Swiftlane cut our average delivery window from four days to under 36 hours across three countries. Our support tickets about "where's my order" dropped by half.</p>
+      <div class="who">Operations Lead, Kaya Retail Group</div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><div class="logo" style="margin-bottom:12px">SWIFTLANE</div><p style="max-width:30ch">Regional courier and freight, built for businesses that can't afford delays.</p></div>
+    <div><h4>Services</h4><ul><li>Express Delivery</li><li>Freight &amp; Cargo</li><li>Warehousing</li></ul></div>
+    <div><h4>Company</h4><ul><li>Coverage Map</li><li>Business Accounts</li><li>Careers</li></ul></div>
+    <div><h4>Support</h4><ul><li>Track a Shipment</li><li>Help Center</li><li>Contact Us</li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Swiftlane Logistics — illustrative design direction, built by Identris.</span>
+    <span>Lagos · Accra · Nairobi</span>
+  </div>
+</div></footer>
 </body>
 </html>

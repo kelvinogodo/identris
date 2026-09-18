@@ -43,13 +43,24 @@ nav{border-bottom:1px solid var(--line)}
 .tiers{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .tier{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:14px 26px;border-radius:100px;font:600 14px Poppins}
 .tier.custom{background:var(--accent);border-color:var(--accent)}
-footer{padding:44px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;flex-wrap:wrap;gap:10px}
+.testimonial{text-align:center;max-width:640px;margin:0 auto}
+.testimonial p{font-family:Poppins,sans-serif;font-size:22px;line-height:1.5;font-weight:500;margin-bottom:16px}
+.testimonial .who{color:var(--accent);font:600 14px/1 Inter}
+footer{padding:56px 0 28px;color:var(--muted);font-size:13px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:36px}
+.foot-grid h4{font:600 12px/1 Inter;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
+.foot-grid li{margin-bottom:9px}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:20px;border-top:1px solid var(--line)}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line);padding:9px 14px;border-radius:100px;font:600 12px Inter}
 @media (max-width:720px){
   .hero-grid{grid-template-columns:1fr}
   .hero h1{font-size:32px}
   .impact-grid{grid-template-columns:1fr 1fr}
   .programs{grid-template-columns:1fr}
+  .testimonial p{font-size:18px}
+  .foot-grid{grid-template-columns:1fr 1fr}
   .navlinks{display:none}
+  .menu-btn{display:block}
 }
 </style>
 </head>
@@ -57,7 +68,10 @@ footer{padding:44px 0;display:flex;justify-content:space-between;color:var(--mut
 <nav><div class="wrap navrow">
   <div class="logo">Bright Future</div>
   <ul class="navlinks"><li>Our Work</li><li>Impact</li><li>Get Involved</li><li>News</li></ul>
-  <a href="#" class="btn">Donate</a>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="#" class="btn">Donate</a>
+    <button class="menu-btn">Menu</button>
+  </div>
 </div></nav>
 
 <section class="hero"><div class="wrap hero-grid">
@@ -92,9 +106,24 @@ footer{padding:44px 0;display:flex;justify-content:space-between;color:var(--mut
   </div>
 </div></section>
 
-<footer class="wrap">
-  <span>Bright Future Foundation — illustrative design direction, built by Identris.</span>
-  <span>Registered Nonprofit · Nigeria</span>
-</footer>
+<section class="section"><div class="wrap">
+  <div class="testimonial">
+    <p>"The borehole Bright Future built means our children walk minutes, not hours, for clean water. That time is now spent in school."</p>
+    <div class="who">Community Leader, Kogi State</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><div class="logo" style="margin-bottom:12px">Bright Future</div><p style="max-width:30ch">A registered nonprofit delivering education, healthcare, and clean water since 2017.</p></div>
+    <div><h4>Programs</h4><ul><li>Education</li><li>Healthcare</li><li>Clean Water</li></ul></div>
+    <div><h4>Get Involved</h4><ul><li>Donate</li><li>Volunteer</li><li>Partner With Us</li></ul></div>
+    <div><h4>Contact</h4><ul><li>Abuja, Nigeria</li><li>+234 1 345 6789</li><li>info@brightfuture.example</li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Bright Future Foundation — illustrative design direction, built by Identris.</span>
+    <span>Registered Nonprofit · Nigeria</span>
+  </div>
+</div></footer>
 </body>
 </html>

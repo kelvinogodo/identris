@@ -14,16 +14,18 @@ export function CaseStudyCard({
   caseStudy: CaseStudy;
   variant?: "summary" | "full";
 }) {
+  const fit = caseStudy.imageFit ?? "cover";
+
   if (variant === "summary") {
     return (
       <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
         <Frame className="lg:col-span-7">
-          <div className="notch-lg relative aspect-[4/3] overflow-hidden border border-sage-dim/25">
+          <div className="notch-lg relative aspect-[4/3] overflow-hidden border border-sage-dim/25 bg-forest-light">
             <Image
               src={caseStudy.image}
               alt={caseStudy.title}
               fill
-              className="object-cover"
+              className={fit === "contain" ? "object-contain p-8" : "object-cover"}
               sizes="(min-width: 1024px) 640px, 100vw"
             />
             <div className="absolute left-4 top-4 bg-forest/80 px-2.5 py-1 font-mono-tech text-[10px] uppercase tracking-[0.15em] text-sage">
@@ -66,12 +68,12 @@ export function CaseStudyCard({
   return (
     <article id={caseStudy.slug} className="scroll-mt-24">
       <Frame>
-        <div className="notch-lg relative aspect-[21/9] w-full overflow-hidden border border-sage-dim/25">
+        <div className="notch-lg relative aspect-[21/9] w-full overflow-hidden border border-sage-dim/25 bg-forest-light">
           <Image
             src={caseStudy.image}
             alt={caseStudy.title}
             fill
-            className="object-cover"
+            className={fit === "contain" ? "object-contain p-10" : "object-cover"}
             sizes="100vw"
           />
           <div className="absolute left-4 top-4 flex flex-wrap gap-2 font-mono-tech text-[10px] uppercase tracking-[0.15em] text-sage">

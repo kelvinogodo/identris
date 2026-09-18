@@ -41,12 +41,23 @@ nav{border-bottom:1px solid var(--line)}
 .docs .spec{color:var(--accent);font-size:13px;font-weight:600}
 .quote{max-width:620px;margin:0 auto;text-align:center;font-size:22px;font-style:italic;line-height:1.5;color:var(--ink)}
 .quote .by{margin-top:20px;font:600 14px/1 'Work Sans';font-style:normal;color:var(--muted)}
-footer{background:var(--mint);padding:44px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13.5px;flex-wrap:wrap;gap:12px}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;padding-block:40px;border-top:1px solid var(--line)}
+.trust h4{font-size:28px;color:var(--accent);margin-bottom:4px}
+.trust p{color:var(--muted);font-size:13px}
+footer{background:var(--mint);padding:56px 0 28px;color:var(--muted);font-size:13.5px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:36px}
+.foot-grid h4{font:600 12px/1;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
+.foot-grid li{margin-bottom:9px}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:20px;border-top:1px solid var(--line)}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line);padding:9px 14px;border-radius:100px;font:600 12px 'Work Sans'}
 @media (max-width:720px){
   .hero h1{font-size:32px}
   .svc-grid{grid-template-columns:1fr 1fr}
   .docs{grid-template-columns:1fr}
+  .trust{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
   .navlinks{display:none}
+  .menu-btn{display:block}
 }
 </style>
 </head>
@@ -54,7 +65,10 @@ footer{background:var(--mint);padding:44px 0;display:flex;justify-content:space-
 <nav><div class="wrap navrow">
   <div class="logo">Nimbus Health</div>
   <ul class="navlinks"><li>Services</li><li>Doctors</li><li>Patients</li><li>Contact</li></ul>
-  <a href="#" class="btn">Book Appointment</a>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="#" class="btn">Book Appointment</a>
+    <button class="menu-btn">Menu</button>
+  </div>
 </div></nav>
 
 <section class="hero"><div class="blob"></div><div class="wrap hero-inner">
@@ -86,9 +100,24 @@ footer{background:var(--mint);padding:44px 0;display:flex;justify-content:space-
   <p class="quote">"The first clinic where I didn't feel rushed. They explained every result and follow-up step clearly."<div class="by">— Patient, 3 years with Nimbus</div></p>
 </div></section>
 
-<footer class="wrap">
-  <span>Nimbus Health Clinic — illustrative design direction, built by Identris.</span>
-  <span>Mon–Sat, 8am–7pm · Lagos</span>
-</footer>
+<div class="wrap trust">
+  <div><h4>15+</h4><p>Years in Practice</p></div>
+  <div><h4>30k+</h4><p>Patients Treated</p></div>
+  <div><h4>4.9/5</h4><p>Average Patient Rating</p></div>
+  <div><h4>Same-Week</h4><p>Appointment Availability</p></div>
+</div>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><div class="logo" style="margin-bottom:12px">Nimbus Health</div><p style="max-width:30ch">Primary and family care built around same-week access and clear communication.</p></div>
+    <div><h4>Services</h4><ul><li>General Medicine</li><li>Pediatrics</li><li>Dental Care</li><li>Diagnostics</li></ul></div>
+    <div><h4>Patients</h4><ul><li>Book Appointment</li><li>Insurance &amp; Billing</li><li>Patient Portal</li></ul></div>
+    <div><h4>Contact</h4><ul><li>Lekki Phase 1, Lagos</li><li>+234 1 987 6543</li><li>care@nimbushealth.example</li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Nimbus Health Clinic — illustrative design direction, built by Identris.</span>
+    <span>Mon–Sat, 8am–7pm · Lagos</span>
+  </div>
+</div></footer>
 </body>
 </html>

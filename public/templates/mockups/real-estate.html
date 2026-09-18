@@ -46,7 +46,15 @@ nav{border-bottom:1px solid var(--line)}
 .agent .photo{width:110px;height:110px;border-radius:50%;background:linear-gradient(160deg,#ddd0b8,#b79b74)}
 .agent h3{font-size:22px;margin-bottom:4px}
 .agent .role{color:var(--accent);font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
-footer{border-top:1px solid var(--line);padding:40px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;flex-wrap:wrap;gap:10px}
+.testimonial{background:#fff;border:1px solid var(--line);padding:48px;text-align:center;margin-bottom:70px}
+.testimonial p{font-family:Fraunces,serif;font-size:24px;line-height:1.5;max-width:52ch;margin:0 auto 18px}
+.testimonial .who{font:600 13px/1 Inter;color:var(--accent);text-transform:uppercase;letter-spacing:.05em}
+footer{border-top:1px solid var(--line);padding:56px 0 28px;color:var(--muted);font-size:13px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px;margin-bottom:36px}
+.foot-grid h4{font:600 12px/1 Inter;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
+.foot-grid li{margin-bottom:9px}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:20px;border-top:1px solid var(--line)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);padding:9px 14px;font:600 12px Inter}
 @media (max-width:720px){
   .hero h1{font-size:30px}
   .hero-copy{padding:32px}
@@ -55,7 +63,10 @@ footer{border-top:1px solid var(--line);padding:40px 0;display:flex;justify-cont
   .listings{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr}
   .agent{flex-direction:column;text-align:center}
+  .testimonial p{font-size:19px}
+  .foot-grid{grid-template-columns:1fr 1fr}
   .navlinks{display:none}
+  .menu-btn{display:block}
 }
 </style>
 </head>
@@ -63,7 +74,10 @@ footer{border-top:1px solid var(--line);padding:40px 0;display:flex;justify-cont
 <nav><div class="wrap navrow">
   <div class="logo">Meridian</div>
   <ul class="navlinks"><li>Buy</li><li>Rent</li><li>Sell</li><li>Agents</li></ul>
-  <a href="#" class="btn">Get in Touch</a>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="#" class="btn">Get in Touch</a>
+    <button class="menu-btn">Menu</button>
+  </div>
 </div></nav>
 
 <div class="hero"><div class="wrap hero-copy"><h1>Find a home that fits your life.</h1></div></div>
@@ -99,9 +113,24 @@ footer{border-top:1px solid var(--line);padding:40px 0;display:flex;justify-cont
   </div>
 </div>
 
-<footer class="wrap">
-  <span>Meridian Properties — illustrative design direction, built by Identris.</span>
-  <span>Lagos, Nigeria</span>
-</footer>
+<div class="wrap">
+  <div class="testimonial">
+    <p>"Chidinma found us a home in Ikoyi within our budget and closed in six weeks — including the parts of the process we didn't know to worry about."</p>
+    <div class="who">Buyer, Ikoyi Villa</div>
+  </div>
+</div>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><div class="logo" style="margin-bottom:12px">Meridian</div><p style="max-width:30ch">Residential and luxury property across Lagos, built on trust and local expertise.</p></div>
+    <div><h4>Explore</h4><ul><li>Buy</li><li>Rent</li><li>Sell</li></ul></div>
+    <div><h4>Company</h4><ul><li>Our Agents</li><li>About Meridian</li><li>Careers</li></ul></div>
+    <div><h4>Contact</h4><ul><li>Ikoyi, Lagos</li><li>+234 1 456 7890</li><li>hello@meridian.example</li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Meridian Properties — illustrative design direction, built by Identris.</span>
+    <span>Lagos, Nigeria</span>
+  </div>
+</div></footer>
 </body>
 </html>

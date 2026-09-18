@@ -54,12 +54,29 @@ footer{background:var(--panel);padding:56px 0 28px;margin-top:0}
 .newsletter input{flex:1;border:1px solid var(--line);border-right:0;padding:12px;font:inherit}
 .newsletter button{background:var(--ink);color:#fff;border:0;padding:0 18px;font:600 13px}
 .copyright{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-block:40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust div{text-align:center}
+.trust h4{font:700 14px/1 Sora;margin-bottom:4px}
+.trust p{color:var(--muted);font-size:12.5px}
+.reviews{padding-block:80px}
+.reviews h2{font-size:32px;margin-bottom:8px}
+.reviews>.wrap>p{color:var(--muted);margin-bottom:40px}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review{background:var(--panel);padding:28px;border-radius:4px}
+.stars{color:var(--accent);font-size:14px;letter-spacing:2px;margin-bottom:12px}
+.review p{font-size:14.5px;line-height:1.6;margin-bottom:16px}
+.review .who{font:700 13px/1 Sora}
+.review .role{color:var(--muted);font-size:12.5px;margin-top:2px}
+.menu-btn{display:none;background:none;border:1px solid var(--line);padding:9px 12px;border-radius:2px;font:600 12px Inter;cursor:pointer}
 @media (max-width:720px){
   .hero-grid{grid-template-columns:1fr}
   .hero h1{font-size:38px}
   .products{grid-template-columns:repeat(2,1fr)}
   .foot-grid{grid-template-columns:1fr 1fr}
+  .trust{grid-template-columns:1fr 1fr}
+  .review-grid{grid-template-columns:1fr}
   .navlinks{display:none}
+  .menu-btn{display:block}
 }
 </style>
 </head>
@@ -67,7 +84,10 @@ footer{background:var(--panel);padding:56px 0 28px;margin-top:0}
 <nav><div class="wrap navrow">
   <div class="logo">Verve</div>
   <ul class="navlinks"><li>Shop</li><li>New In</li><li>Sale</li><li>About</li></ul>
-  <div class="cart">Cart <span class="dot">3</span></div>
+  <div style="display:flex;align-items:center;gap:14px">
+    <div class="cart">Cart <span class="dot">3</span></div>
+    <button class="menu-btn">Menu</button>
+  </div>
 </div></nav>
 
 <section class="hero"><div class="wrap hero-grid">
@@ -95,6 +115,38 @@ footer{background:var(--panel);padding:56px 0 28px;margin-top:0}
 </div>
 
 <div class="promo">Free shipping on orders over ₦50,000 — ends Sunday</div>
+
+<div class="wrap trust">
+  <div><h4>Free Shipping</h4><p>On all orders over ₦50,000</p></div>
+  <div><h4>Easy Returns</h4><p>30-day return window</p></div>
+  <div><h4>Secure Checkout</h4><p>Encrypted payment, every time</p></div>
+  <div><h4>Made to Order</h4><p>Small batches, less waste</p></div>
+</div>
+
+<section class="reviews"><div class="wrap">
+  <h2>What people are wearing</h2>
+  <p>Real feedback from a growing list of repeat customers.</p>
+  <div class="review-grid">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"The wool overshirt is the third piece I've bought from Verve. Fit is consistent every time, which is rare."</p>
+      <div class="who">Amara O.</div>
+      <div class="role">Lagos</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"Ordered Thursday, wore it Saturday. Delivery was faster than brands twice the price."</p>
+      <div class="who">Tunde A.</div>
+      <div class="role">Abuja</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"Returned a size without any hassle. That alone made me trust the brand enough to order again."</p>
+      <div class="who">Chiamaka N.</div>
+      <div class="role">Port Harcourt</div>
+    </div>
+  </div>
+</div></section>
 
 <footer><div class="wrap foot-grid">
   <div>

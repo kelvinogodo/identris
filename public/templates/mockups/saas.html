@@ -54,13 +54,24 @@ nav{border-bottom:1px solid var(--line)}
 .plan .price{font:600 32px/1 'Space Grotesk';margin-bottom:18px}
 .plan .price span{font:400 13px Inter;color:var(--muted)}
 .plan ul{display:flex;flex-direction:column;gap:10px;margin-bottom:22px;color:var(--muted);font-size:13.5px}
-footer{border-top:1px solid var(--line);padding:40px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;flex-wrap:wrap;gap:10px}
+.testimonial{max-width:640px;margin:0 auto;text-align:center}
+.testimonial p{font-family:'Space Grotesk',sans-serif;font-size:24px;line-height:1.5;margin-bottom:18px}
+.testimonial .who{color:var(--accent);font:600 13px/1 'IBM Plex Mono'}
+footer{border-top:1px solid var(--line);padding:56px 0 28px;color:var(--muted);font-size:13px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:36px}
+.foot-grid h4{font:600 12px/1 'IBM Plex Mono';letter-spacing:.05em;text-transform:uppercase;color:var(--text);margin-bottom:14px}
+.foot-grid li{margin-bottom:9px}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:20px;border-top:1px solid var(--line)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:9px 14px;border-radius:6px;font:600 12px Inter}
 @media (max-width:720px){
   .hero h1{font-size:34px}
   .dash-body{grid-template-columns:1fr}
   .dash-nav{display:none}
   .features,.pricing{grid-template-columns:1fr}
+  .testimonial p{font-size:19px}
+  .foot-grid{grid-template-columns:1fr 1fr}
   .navlinks{display:none}
+  .menu-btn{display:block}
 }
 </style>
 </head>
@@ -68,7 +79,10 @@ footer{border-top:1px solid var(--line);padding:40px 0;display:flex;justify-cont
 <nav><div class="wrap navrow">
   <div class="logo">Cortex</div>
   <ul class="navlinks"><li>Product</li><li>Pricing</li><li>Docs</li><li>Changelog</li></ul>
-  <a href="#" class="btn">Start Free Trial</a>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="#" class="btn">Start Free Trial</a>
+    <button class="menu-btn">Menu</button>
+  </div>
 </div></nav>
 
 <section class="hero"><div class="wrap">
@@ -110,9 +124,24 @@ footer{border-top:1px solid var(--line);padding:40px 0;display:flex;justify-cont
   </div>
 </div></section>
 
-<footer class="wrap">
-  <span>Cortex — illustrative design direction, built by Identris.</span>
-  <span class="mono">STATUS: ALL SYSTEMS OPERATIONAL</span>
-</footer>
+<section class="section"><div class="wrap">
+  <div class="testimonial">
+    <p>"We replaced four dashboards and a weekly export ritual with one Cortex view. Our PMs make ship/no-ship calls in the standup now, not a day later."</p>
+    <div class="who">VP PRODUCT, DELTA LABS</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><div class="logo" style="margin-bottom:12px">Cortex</div><p style="max-width:30ch">Real-time analytics and collaboration for fast-moving product teams.</p></div>
+    <div><h4>Product</h4><ul><li>Analytics</li><li>Collaboration</li><li>API</li></ul></div>
+    <div><h4>Company</h4><ul><li>About</li><li>Careers</li><li>Blog</li></ul></div>
+    <div><h4>Resources</h4><ul><li>Documentation</li><li>Changelog</li><li>Support</li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Cortex — illustrative design direction, built by Identris.</span>
+    <span class="mono">STATUS: ALL SYSTEMS OPERATIONAL</span>
+  </div>
+</div></footer>
 </body>
 </html>

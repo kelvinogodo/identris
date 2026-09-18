@@ -31,5 +31,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     featured: true,
     image: "/case-studies/nigeria-coat-of-arms.svg",
+    imageFit: "contain",
   },
 ];

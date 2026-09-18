@@ -117,6 +117,13 @@ To add one:
 The gallery, filters, and preview modal on `/templates` (and the teaser strip
 on Home) pick it up automatically.
 
+## Asset attribution
+
+`public/case-studies/nigeria-coat-of-arms.svg` is the Coat of Arms of Nigeria
+by Lumia1234, from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Nigeria.svg),
+licensed [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
+Unmodified from the source file.
+
 ## Deploying
 
 Push to a Git repository and import it in [Vercel](https://vercel.com/new).

@@ -40,14 +40,21 @@ nav{border-bottom:1px solid var(--line)}
 .announce li{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
 .announce .date{font:700 12px/1;color:var(--accent);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
 .announce .title{font-weight:600}
-footer{background:var(--ink);color:#cdd8ea;padding:40px 0;font-size:13px}
-.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;padding-block:48px;background:var(--panel)}
+.stats .num{font-size:36px;font-weight:700;color:var(--accent)}
+.stats .label{color:var(--muted);font-size:13px;margin-top:6px}
+footer{background:var(--ink);color:#cdd8ea;padding:48px 0 24px;font-size:13px}
+.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:24px;margin-bottom:28px}
 .footgrid h4{color:#fff;font-size:13px;margin-bottom:12px}
 .footgrid li{margin-bottom:8px;opacity:.85}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);opacity:.75}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);padding:8px 12px;font:600 12px 'Source Sans 3'}
 @media (max-width:720px){
   .hero h1{font-size:30px}
   .services{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr}
   .navlinks{display:none}
+  .menu-btn{display:block}
   .footgrid{grid-template-columns:1fr}
 }
 </style>
@@ -57,6 +64,7 @@ footer{background:var(--ink);color:#cdd8ea;padding:40px 0;font-size:13px}
 <nav><div class="wrap navrow">
   <div class="brand"><span class="seal">SDS</span> State Digital Services</div>
   <ul class="navlinks"><li>Services</li><li>Agencies</li><li>News</li><li>Help</li></ul>
+  <button class="menu-btn">Menu</button>
 </div></nav>
 
 <section class="hero"><div class="wrap">
@@ -84,10 +92,23 @@ footer{background:var(--ink);color:#cdd8ea;padding:40px 0;font-size:13px}
   </ul>
 </div></section>
 
-<footer><div class="wrap footgrid">
-  <div><h4>State Digital Services</h4><p style="opacity:.75;max-width:36ch">Committed to accessible, plain-language public services for every resident.</p></div>
-  <div><h4>Agencies</h4><ul><li>Revenue Service</li><li>Civil Registry</li><li>Public Works</li></ul></div>
-  <div><h4>Help</h4><ul><li>Accessibility</li><li>Contact Support</li><li>FAQs</li></ul></div>
+<div class="stats"><div class="wrap" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+  <div><div class="num">1.2M+</div><div class="label">Residents Served Online</div></div>
+  <div><div class="num">48</div><div class="label">Services Digitized</div></div>
+  <div><div class="num">6 min</div><div class="label">Average Processing Time</div></div>
+</div></div>
+
+<footer><div class="wrap">
+  <div class="footgrid">
+    <div><h4>State Digital Services</h4><p style="opacity:.75;max-width:36ch">Committed to accessible, plain-language public services for every resident.</p></div>
+    <div><h4>Agencies</h4><ul><li>Revenue Service</li><li>Civil Registry</li><li>Public Works</li></ul></div>
+    <div><h4>Help</h4><ul><li>Accessibility</li><li>Contact Support</li><li>FAQs</li></ul></div>
+    <div><h4>Legal</h4><ul><li>Privacy Policy</li><li>Terms of Use</li><li>Data Protection</li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© State Digital Services — illustrative design direction, built by Identris.</span>
+    <span>An official government digital service</span>
+  </div>
 </div></footer>
 </body>
 </html>

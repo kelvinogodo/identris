@@ -45,13 +45,20 @@ nav{border-bottom:1px solid var(--line)}
 .quote .by{margin-top:18px;font:600 14px/1 Lexend;color:var(--muted)}
 .apply{background:var(--ink);color:#fff;border-radius:16px;padding:48px;text-align:center}
 .apply h2{color:#fff;margin-bottom:24px}
-footer{padding:40px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;flex-wrap:wrap;gap:10px}
+footer{padding:56px 0 28px;color:var(--muted);font-size:13px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:36px}
+.foot-grid h4{font:600 12px/1 Inter;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
+.foot-grid li{margin-bottom:9px}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:20px;border-top:1px solid var(--line)}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line);padding:9px 14px;border-radius:6px;font:600 12px Inter}
 @media (max-width:720px){
   .hero-grid{grid-template-columns:1fr}
   .hero h1{font-size:32px}
   .programs{grid-template-columns:1fr 1fr}
   .stats{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
   .navlinks{display:none}
+  .menu-btn{display:block}
 }
 </style>
 </head>
@@ -59,7 +66,10 @@ footer{padding:40px 0;display:flex;justify-content:space-between;color:var(--mut
 <nav><div class="wrap navrow">
   <div class="logo">Ascend Academy</div>
   <ul class="navlinks"><li>Programs</li><li>Admissions</li><li>Faculty</li><li>Resources</li></ul>
-  <a href="#" class="btn">Enroll Now</a>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="#" class="btn">Enroll Now</a>
+    <button class="menu-btn">Menu</button>
+  </div>
 </div></nav>
 
 <section class="hero"><div class="wrap hero-grid">
@@ -96,9 +106,17 @@ footer{padding:40px 0;display:flex;justify-content:space-between;color:var(--mut
   <a href="#" class="btn">Apply Today</a>
 </div></section>
 
-<footer class="wrap">
-  <span>Ascend Academy — illustrative design direction, built by Identris.</span>
-  <span>Lagos, Nigeria</span>
-</footer>
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><div class="logo" style="margin-bottom:12px">Ascend Academy</div><p style="max-width:30ch">Practical, instructor-led programs for people starting or changing careers.</p></div>
+    <div><h4>Programs</h4><ul><li>Web Development</li><li>UX/UI Design</li><li>Data Analysis</li></ul></div>
+    <div><h4>Admissions</h4><ul><li>How to Apply</li><li>Tuition &amp; Financing</li><li>Scholarships</li></ul></div>
+    <div><h4>Contact</h4><ul><li>Yaba, Lagos</li><li>+234 1 222 3344</li><li>admissions@ascend.example</li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Ascend Academy — illustrative design direction, built by Identris.</span>
+    <span>Lagos, Nigeria</span>
+  </div>
+</div></footer>
 </body>
 </html>
