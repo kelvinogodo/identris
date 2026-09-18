@@ -32,7 +32,9 @@ export type TemplateCategory =
   | "ngo"
   | "hospitality"
   | "saas"
-  | "education";
+  | "education"
+  | "fashion"
+  | "cosmetics";
 
 export type TemplateEntry = {
   slug: string;
