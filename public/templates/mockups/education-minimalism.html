@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STUDY — Minimalist Direction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--text:#0A0A0A;--muted:#6E6E6E;--line:#EDEDED}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:400 13px/1.7 Inter,sans-serif;color:var(--text);background:var(--bg);letter-spacing:.01em}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:40px}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;letter-spacing:-0.01em;color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--text);font:500 12px/1 Inter;letter-spacing:.12em;text-transform:uppercase;padding:16px 30px;border:1px solid var(--text);transition:background .15s,color .15s}
+.btn:hover{background:var(--text);color:#fff}
+.btn.fill{background:var(--text);color:#fff}
+.btn.fill:hover{background:transparent;color:var(--text)}
+nav{border-bottom:1px solid var(--line)}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:96px}
+.logo{font-family:'Playfair Display';font-size:20px;letter-spacing:.02em}
+.navlinks{display:flex;gap:44px;font:500 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.menu-btn{display:none;background:none;border:1px solid var(--text);padding:9px 16px;font:500 10px Inter;letter-spacing:.1em;text-transform:uppercase}
+.hero{padding-block:120px}
+.hero .kicker{font:500 11px/1 Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
+.hero h1{font-size:clamp(40px,6vw,84px);line-height:1.05;max-width:16ch;margin-bottom:36px}
+.hero p{color:var(--muted);max-width:46ch;margin-bottom:44px;font-size:15px;line-height:1.8}
+.section{padding-block:100px;border-top:1px solid var(--line)}
+.section .kicker{font:500 11px/1 Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.section h2{font-size:clamp(28px,3.6vw,44px);margin-bottom:56px;max-width:20ch}
+.rows{display:flex;flex-direction:column}
+.row{display:grid;grid-template-columns:60px 1fr 1fr;gap:40px;padding:36px 0;border-top:1px solid var(--line);align-items:baseline}
+.rows .row:last-child{border-bottom:1px solid var(--line)}
+.row .idx{font:500 12px/1 Inter;color:var(--muted)}
+.row h3{font-size:20px}
+.row p{color:var(--muted);font-size:14px;line-height:1.7}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:60px}
+.stats .num{font-family:'Playfair Display';font-size:56px;line-height:1;margin-bottom:12px}
+.stats .label{font:500 11px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.testimonial{max-width:760px}
+.testimonial p{font-family:'Playfair Display';font-style:italic;font-size:clamp(22px,3vw,32px);line-height:1.5;margin-bottom:28px}
+.testimonial .who{font:500 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+footer{padding:80px 0 40px;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:60px}
+.foot-grid h4{font:500 11px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--text);margin-bottom:20px}
+.foot-grid li{margin-bottom:12px;color:var(--muted);font-size:13px}
+.foot-bottom{border-top:1px solid var(--line);padding-top:24px;color:var(--muted);font-size:11px;letter-spacing:.05em;text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:720px){
+  .navlinks{display:none}
+  .menu-btn{display:block}
+  .row{grid-template-columns:1fr;gap:8px}
+  .stats{grid-template-columns:1fr;gap:36px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .wrap{padding-inline:24px}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap navrow">
+  <div class="logo">STUDY</div>
+  <ul class="navlinks"><li>Programs</li><li>Admissions</li><li>Faculty</li></ul>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="#" class="btn">Apply Now</a>
+    <button class="menu-btn">Menu</button>
+  </div>
+</div></nav>
+
+<section class="hero"><div class="wrap">
+  <div class="kicker">Career-Change Programs</div>
+  <h1>Learning, plainly taught.</h1>
+  <p>Practical, instructor-led programs in tech, design, and business.</p>
+  <a href="#" class="btn fill">Apply Now</a>
+</div></section>
+
+
+<section class="section"><div class="wrap">
+  <div class="kicker">Popular Programs</div>
+  <h2>What you can study.</h2>
+  <div class="rows">
+    <div class="row"><span class="idx">01</span><h3>Web Development</h3><p>12 weeks — ₦180,000</p></div>
+    <div class="row"><span class="idx">02</span><h3>UX/UI Design</h3><p>8 weeks — ₦140,000</p></div>
+    <div class="row"><span class="idx">03</span><h3>Data Analysis</h3><p>10 weeks — ₦160,000</p></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap stats">
+  <div><div class="num">89%</div><div class="label">Job placement</div></div>
+  <div><div class="num">1,200+</div><div class="label">Graduates</div></div>
+  <div><div class="num">40+</div><div class="label">Instructors</div></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="testimonial">
+    <p>"The program gave me a portfolio and a job offer before I finished."</p>
+    <div class="who">Graduate, Cohort 14</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><h4>Study</h4><p style="color:var(--muted);font-size:13px;max-width:30ch">Practical programs for career changers.</p></div>
+    <div><h4>Programs</h4><ul><li>Web Development</li><li>UX/UI Design</li></ul></div>
+    <div><h4>Admissions</h4><ul><li>How to Apply</li><li>Financing</li></ul></div>
+    <div><h4>Contact</h4><ul><li>Yaba, Lagos</li><li>admissions@study.example</li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© STUDY — illustrative design direction, built by Identris.</span>
+    <span>Lagos, Nigeria</span>
+  </div>
+</div></footer>
+</body>
+</html>
