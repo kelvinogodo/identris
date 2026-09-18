@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COMMONS — Bento Grid Direction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F7F5;--text:#16161A;--muted:#6B6B76;--line:#E7E7E2;--accent:#FF5A8A;--cell:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:400 16px/1.6 Inter,sans-serif;color:var(--text);background:var(--bg)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:28px}
+h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;letter-spacing:-0.01em}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--text);color:#fff;font:600 14px/1 'Plus Jakarta Sans';padding:15px 26px;border-radius:14px}
+.btn.accent{background:var(--accent);color:#fff}
+nav{border-bottom:1px solid var(--line)}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo{font:700 20px/1 'Plus Jakarta Sans'}
+.navlinks{display:flex;gap:30px;font:500 14px/1 Inter;color:var(--muted)}
+.menu-btn{display:none;background:var(--cell);border:1px solid var(--line);padding:9px 14px;border-radius:10px;font:600 12px Inter}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(90px,auto);gap:20px;padding-block:44px}
+.cell{background:var(--cell);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;justify-content:center}
+.cell.dark{background:var(--text);color:#fff}
+.cell.accent{background:var(--accent);color:#fff}
+.span2{grid-column:span 2}
+.span2r{grid-row:span 2}
+.span4{grid-column:span 4}
+.cell h1{font-size:clamp(26px,3vw,38px);line-height:1.1}
+.cell p{color:var(--muted);font-size:15px;margin-top:10px}
+.cell.dark p,.cell.accent p{color:rgba(255,255,255,.8)}
+.cell .num{font:800 40px/1 'Plus Jakarta Sans'}
+.cell .cap{font:600 11px/1 Inter;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
+.cell.dark .cap,.cell.accent .cap{color:rgba(255,255,255,.7)}
+.section{padding-block:44px}
+.section h2{font-size:clamp(22px,2.6vw,30px);margin-bottom:28px}
+.testimonial{grid-column:span 4;padding:44px;text-align:center}
+.testimonial p{font:700 22px/1.4 'Plus Jakarta Sans';margin-bottom:14px;color:var(--text)}
+.testimonial .who{color:var(--accent);font:600 13px/1 Inter}
+footer{padding:52px 0 28px;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:32px}
+.foot-grid h4{font:700 12px/1 'Plus Jakarta Sans';color:var(--text);margin-bottom:14px}
+.foot-grid li{margin-bottom:9px;color:var(--muted);font-size:14px}
+.foot-bottom{color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:720px){
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .span2,.span4,.testimonial{grid-column:span 2}
+  .navlinks{display:none}
+  .menu-btn{display:block}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap navrow">
+  <div class="logo">COMMONS</div>
+  <ul class="navlinks"><li>Our Work</li><li>Impact</li><li>Give</li></ul>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="#" class="btn accent">Give Now</a>
+    <button class="menu-btn">Menu</button>
+  </div>
+</div></nav>
+
+<div class="wrap">
+  <div class="bento">
+    <div class="cell span2 span2r">
+      <h1>Every gift, clearly tracked.</h1>
+      <p>See exactly where your donation goes — laid out in one transparent view.</p>
+      <div style="margin-top:20px"><a href="#" class="btn accent">Give Now</a></div>
+    </div>
+    <div class="cell accent">
+      <div class="cap">To Programs</div>
+      <div class="num">100%</div>
+    </div>
+    <div class="cell dark">
+      <div class="cap">Reached</div>
+      <div class="num">12.4K</div>
+    </div>
+    <div class="cell">
+      <div class="cap">Communities</div>
+      <p style="margin-top:0;color:var(--text);font-weight:600">38</p>
+    </div>
+    <div class="cell">
+      <div class="cap">Years Active</div>
+      <p style="margin-top:0;color:var(--text);font-weight:600">9</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrap"><div class="section"><h2>Our Programs</h2>
+  <div class="bento" style="padding-block:0">
+    <div class="cell span2"><div class="cap">Education</div><p style="margin-top:0;color:var(--text);font-weight:600">Scholarships &amp; supplies</p></div>
+    <div class="cell"><div class="cap">Healthcare</div><p style="margin-top:0;color:var(--text);font-weight:600">Mobile clinics</p></div>
+    <div class="cell"><div class="cap">Clean Water</div><p style="margin-top:0;color:var(--text);font-weight:600">Boreholes</p></div>
+  </div>
+</div></div>
+
+<div class="wrap">
+  <div class="bento" style="padding-block:0 44px">
+    <div class="cell testimonial">
+      <p>"I can see exactly which classroom my donation funded. That clarity is rare and it's why I kept giving."</p>
+      <div class="who">Monthly Donor</div>
+    </div>
+  </div>
+</div>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><h4>Commons</h4><p style="color:var(--muted);font-size:14px;max-width:30ch">A registered nonprofit delivering education, healthcare, and clean water.</p></div>
+    <div><h4>Programs</h4><ul><li>Education</li><li>Healthcare</li><li>Clean Water</li></ul></div>
+    <div><h4>Get Involved</h4><ul><li>Donate</li><li>Volunteer</li></ul></div>
+    <div><h4>Contact</h4><ul><li>Abuja, Nigeria</li><li>info@commons.example</li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© COMMONS — illustrative design direction, built by Identris.</span>
+    <span>Registered Nonprofit · Nigeria</span>
+  </div>
+</div></footer>
+</body>
+</html>
