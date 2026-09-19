@@ -6,6 +6,8 @@ type Tone = "dark" | "light";
 type SectionProps = HTMLAttributes<HTMLElement> & {
   tone?: Tone;
   containerClassName?: string;
+  /** First section of a page: stagger in on load instead of on scroll. */
+  intro?: boolean;
 };
 
 const toneClasses: Record<Tone, string> = {
@@ -17,6 +19,7 @@ export function Section({
   tone = "dark",
   className = "",
   containerClassName = "",
+  intro = false,
   children,
   ...props
 }: SectionProps) {
@@ -25,7 +28,9 @@ export function Section({
       className={`py-16 md:py-24 ${toneClasses[tone]} ${className}`}
       {...props}
     >
-      <Container className={containerClassName}>{children}</Container>
+      <Container
+        className={`${intro ? "intro" : "reveal-block"} ${containerClassName}`}
+      >{children}</Container>
     </section>
   );
 }

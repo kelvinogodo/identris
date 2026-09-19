@@ -57,7 +57,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <Section tone="dark" className="pt-20 pb-16 md:pt-28 md:pb-20">
+      <Section intro tone="dark" className="hero-ambient pt-20 pb-16 md:pt-28 md:pb-20">
         <div className="max-w-3xl">
           <h1 className="font-heading text-5xl font-semibold leading-[1.08] text-sage md:text-7xl lg:text-[4.5rem]">
             Systems that help your organization{" "}
@@ -96,7 +96,7 @@ export default function HomePage() {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="border-t border-sage-dim/20">
+            <div className="reveal-children border-t border-sage-dim/20">
               {capabilities.map((capability, index) => (
                 <Link
                   key={capability.title}
@@ -119,7 +119,7 @@ export default function HomePage() {
                   </div>
                   <Icon
                     name="arrow-right"
-                    className="hidden h-5 w-5 shrink-0 text-lime opacity-0 transition-opacity group-hover:opacity-100 sm:block"
+                    className="nudge-x hidden h-5 w-5 shrink-0 text-lime opacity-0 transition-opacity group-hover:opacity-100 sm:block"
                   />
                 </Link>
               ))}
@@ -156,7 +156,7 @@ export default function HomePage() {
             Browse Templates
           </Button>
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4">
+        <div className="reveal-children mt-10 grid grid-cols-2 gap-5 md:grid-cols-4">
           {templatePreview.map((template) => (
             <Link key={template.slug} href={`/templates#${template.slug}`} className="group block">
               <Frame>
@@ -184,7 +184,7 @@ export default function HomePage() {
         </h2>
         <div className="relative mt-14">
           <div className="absolute left-0 right-0 top-[22px] hidden h-px bg-sage-dim/25 md:block" />
-          <div className="grid gap-10 md:grid-cols-4">
+          <div className="reveal-children grid gap-10 md:grid-cols-4">
             {process.map((step) => (
               <div key={step.title} className="relative bg-forest-light md:pr-6">
                 <div className="notch-sm relative z-10 flex h-11 w-11 items-center justify-center border border-lime/50 bg-forest text-lime">

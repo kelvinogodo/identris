@@ -102,3 +102,218 @@ h6 {
 .text-glow {
   text-shadow: 0 0 24px rgba(179, 224, 46, 0.45);
 }
+
+/* ---- Motion system --------------------------------------------------- */
+
+:root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Page transitions (React ViewTransition, see src/app/template.tsx).
+   The header is pinned so only the page content moves. */
+::view-transition {
+  pointer-events: none;
+}
+::view-transition-group(site-header) {
+  animation: none;
+  z-index: 100;
+}
+::view-transition-old(site-header) {
+  display: none;
+}
+::view-transition-new(site-header) {
+  animation: none;
+}
+
+::view-transition-old(.page-swap) {
+  animation: 180ms ease-in both page-out;
+}
+::view-transition-new(.page-swap) {
+  animation: 420ms var(--ease-out-expo) 120ms both page-in;
+}
+
+@keyframes page-out {
+  to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+/* Load-in stagger for the first section of every page. Plain CSS, so the
+   content is fully visible if animations are unavailable. */
+.intro > * {
+  animation: rise 800ms var(--ease-out-expo) both;
+}
+.intro > :nth-child(2) {
+  animation-delay: 120ms;
+}
+.intro > :nth-child(3) {
+  animation-delay: 240ms;
+}
+.intro > :nth-child(n + 4) {
+  animation-delay: 360ms;
+}
+/* One level deeper, so headline / copy / buttons inside the hero column stagger. */
+.intro > div > * {
+  animation: rise 800ms var(--ease-out-expo) both;
+}
+.intro > div > :nth-child(2) {
+  animation-delay: 140ms;
+}
+.intro > div > :nth-child(3) {
+  animation-delay: 280ms;
+}
+.intro > div > :nth-child(n + 4) {
+  animation-delay: 420ms;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+/* Scroll reveals, driven by scroll position with no JavaScript. Browsers
+   without animation-timeline support simply show the content. */
+@supports (animation-timeline: view()) {
+  .reveal-block > :not(.reveal-children),
+  .reveal-children > * {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Ambient hero backdrop: faint grid plus a slowly drifting lime glow. */
+.hero-ambient {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.hero-ambient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(199, 218, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(199, 218, 212, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 80% at 70% 30%, #000 20%, transparent 75%);
+}
+.hero-ambient::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -20%;
+  right: -10%;
+  width: 46rem;
+  height: 46rem;
+  max-width: 90vw;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(179, 224, 46, 0.16), transparent 65%);
+  filter: blur(20px);
+  animation: drift 16s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes drift {
+  to {
+    transform: translate(-12%, 14%) scale(1.15);
+  }
+}
+
+/* Pulsing headline accent */
+.text-glow {
+  animation: glow-pulse 4s ease-in-out infinite alternate;
+}
+@keyframes glow-pulse {
+  from {
+    text-shadow: 0 0 16px rgba(179, 224, 46, 0.3);
+  }
+  to {
+    text-shadow: 0 0 34px rgba(179, 224, 46, 0.6);
+  }
+}
+
+/* Hover micro-interactions */
+.lift {
+  transition:
+    transform 300ms var(--ease-out-expo),
+    border-color 200ms ease,
+    background-color 200ms ease;
+}
+.lift:hover {
+  transform: translateY(-4px);
+  border-color: rgba(179, 224, 46, 0.5);
+}
+
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  padding-bottom: 3px;
+  transition:
+    background-size 300ms var(--ease-out-expo),
+    color 150ms ease;
+}
+.link-underline:hover,
+.link-underline[aria-current="page"] {
+  background-size: 100% 1px;
+}
+
+.nudge-x {
+  transition: transform 250ms var(--ease-out-expo);
+}
+.group:hover .nudge-x,
+a:hover > .nudge-x {
+  transform: translateX(5px);
+}
+
+/* Mobile menu */
+.menu-drop {
+  animation: menu-drop 260ms var(--ease-out-expo) both;
+  transform-origin: top;
+}
+@keyframes menu-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}

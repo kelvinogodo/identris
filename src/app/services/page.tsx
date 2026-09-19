@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ServicesPage() {
   return (
     <>
-      <Section tone="dark" className="pt-20 pb-14 md:pt-28">
+      <Section intro tone="dark" className="pt-20 pb-14 md:pt-28">
         <Eyebrow index="05">What we build</Eyebrow>
         <h1 className="mt-5 max-w-2xl font-heading text-5xl font-semibold text-sage md:text-6xl">
           What Identris Builds

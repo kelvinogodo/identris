@@ -44,7 +44,7 @@ const principles = [
 export default function AboutPage() {
   return (
     <>
-      <Section tone="dark" className="pt-20 pb-14 md:pt-28">
+      <Section intro tone="dark" className="pt-20 pb-14 md:pt-28">
         <Eyebrow index="ABOUT">Identris Systems Limited</Eyebrow>
         <h1 className="mt-5 max-w-3xl font-heading text-5xl font-semibold text-sage md:text-6xl">
           Built to be trusted with something important

@@ -13,7 +13,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-sage-dim/20 bg-forest/95 backdrop-blur">
+    <header style={{ viewTransitionName: "site-header" }} className="fixed top-0 z-50 w-full border-b border-sage-dim/20 bg-forest/95 backdrop-blur">
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 py-4 md:px-10">
         <Logo />
 
@@ -25,7 +25,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-lime ${
+                className={`link-underline flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-lime ${
                   isActive ? "text-lime" : "text-sage"
                 }`}
                 aria-current={isActive ? "page" : undefined}
@@ -59,7 +59,7 @@ export function Header() {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="border-t border-sage-dim/20 bg-forest px-6 py-6 md:hidden"
+          className="menu-drop border-t border-sage-dim/20 bg-forest px-6 py-6 md:hidden"
         >
           <ul className="flex flex-col gap-5">
             {navLinks.map((link) => {

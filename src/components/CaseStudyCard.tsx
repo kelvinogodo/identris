@@ -58,7 +58,7 @@ export function CaseStudyCard({
             className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-lime hover:underline"
           >
             Read the full case study
-            <Icon name="arrow-right" className="h-4 w-4" />
+            <Icon name="arrow-right" className="nudge-x h-4 w-4" />
           </Link>
         </div>
       </div>

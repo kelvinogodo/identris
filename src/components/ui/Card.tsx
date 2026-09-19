@@ -7,7 +7,7 @@ export function Card({
 }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={`notch border border-sage-dim/25 bg-forest-light p-6 md:p-8 ${className}`}
+      className={`notch lift border border-sage-dim/25 bg-forest-light p-6 md:p-8 ${className}`}
       {...props}
     >
       {children}

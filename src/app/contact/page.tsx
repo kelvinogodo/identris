@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function ContactPage() {
   return (
-    <Section tone="dark" className="pt-20 pb-24 md:pt-28">
+    <Section intro tone="dark" className="pt-20 pb-24 md:pt-28">
       <div className="max-w-2xl">
         <Eyebrow index="06">Get in touch</Eyebrow>
         <h1 className="mt-5 font-heading text-5xl font-semibold text-sage md:text-6xl">
