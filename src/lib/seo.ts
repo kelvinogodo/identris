@@ -8,15 +8,11 @@ type PageSeoInput = {
   ogImage?: string;
 };
 
-// TODO: /og/default.svg is a placeholder. Most social platforms (X, Facebook,
-// LinkedIn) require a raster og:image (PNG/JPG, 1200x630) — replace this with
-// a real exported image before launch, and pass a custom `ogImage` per page
-// for pages that deserve their own share image.
 export function buildMetadata({
   title,
   description,
   path,
-  ogImage = "/og/default.svg",
+  ogImage = "/og/default.png",
 }: PageSeoInput): Metadata {
   const url = `${siteConfig.url}${path}`;
 
@@ -48,7 +44,7 @@ export function organizationJsonLd() {
     "@type": "Organization",
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/logo/identris-logo.png`, // TODO: replace once real logo asset is added
+    logo: `${siteConfig.url}/logo/identris-logo.png`,
     description: siteConfig.description,
     founder: {
       "@type": "Person",
