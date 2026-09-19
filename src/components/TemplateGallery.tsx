@@ -72,7 +72,7 @@ export function TemplateGallery({ templates }: { templates: TemplateEntry[] }) {
         ))}
       </div>
 
-      <div className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="reveal-children mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((template) => (
           <div key={template.slug} id={template.slug} className="scroll-mt-24">
             <Frame>

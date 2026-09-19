@@ -185,7 +185,9 @@ h6 {
 @supports (animation-timeline: view()) {
   .reveal-block > :not(.reveal-children),
   .reveal-children > * {
-    animation: reveal linear both;
+    /* `backwards`, not `both`: once revealed the animation stops holding a
+       transform, so it can't become a containing block for fixed children. */
+    animation: reveal linear backwards;
     animation-timeline: view();
     animation-range: entry 0% entry 40%;
   }

@@ -27,7 +27,7 @@ export default function TemplatesPage() {
         </p>
       </Section>
 
-      <Section tone="dark" className="pt-0">
+      <Section tone="dark" reveal={false} className="pt-0">
         <TemplateGallery templates={templates} />
       </Section>
     </>

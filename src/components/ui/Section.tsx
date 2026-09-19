@@ -8,6 +8,11 @@ type SectionProps = HTMLAttributes<HTMLElement> & {
   containerClassName?: string;
   /** First section of a page: stagger in on load instead of on scroll. */
   intro?: boolean;
+  /**
+   * Set false for sections that contain `position: fixed` descendants (modals):
+   * a transform animation on an ancestor makes it their containing block.
+   */
+  reveal?: boolean;
 };
 
 const toneClasses: Record<Tone, string> = {
@@ -20,6 +25,7 @@ export function Section({
   className = "",
   containerClassName = "",
   intro = false,
+  reveal = true,
   children,
   ...props
 }: SectionProps) {
@@ -29,7 +35,7 @@ export function Section({
       {...props}
     >
       <Container
-        className={`${intro ? "intro" : "reveal-block"} ${containerClassName}`}
+        className={`${intro ? "intro" : reveal ? "reveal-block" : ""} ${containerClassName}`}
       >{children}</Container>
     </section>
   );
