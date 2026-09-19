@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
@@ -85,11 +86,14 @@ export default function AboutPage() {
         <Eyebrow index="01">Founder</Eyebrow>
         <div className="mt-8 grid gap-10 lg:grid-cols-12">
           <Frame className="lg:col-span-3">
-            <div
-              className="notch-lg flex aspect-square w-full max-w-[11rem] items-center justify-center border border-lime/40 bg-forest font-heading text-4xl font-semibold text-lime lg:max-w-none"
-              aria-hidden="true"
-            >
-              KO
+            <div className="notch-lg relative aspect-[4/5] w-full max-w-[16rem] overflow-hidden border border-lime/40 bg-forest lg:max-w-none">
+              <Image
+                src="/founder/kelvin-ogodo.jpg"
+                alt="Kelvin Ogodo, CEO and Managing Director of Identris Systems Limited"
+                fill
+                className="object-cover object-top"
+                sizes="(min-width: 1024px) 260px, 256px"
+              />
             </div>
           </Frame>
           <div className="lg:col-span-9">
