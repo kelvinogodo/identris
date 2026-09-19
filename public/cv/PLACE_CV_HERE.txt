@@ -1,6 +1,0 @@
-Drop Kelvin's CV PDF in this folder, named exactly: kelvin-ogodo-cv.pdf
-
-That filename matches src/lib/constants.ts -> siteConfig.cvUrl.
-If you use a different filename, update that constant to match.
-
-Delete this placeholder file once the real CV is in place.
