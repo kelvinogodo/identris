@@ -42,6 +42,36 @@ const principles = [
   },
 ];
 
+type TeamMember = {
+  name: string;
+  role: string;
+  photo?: string;
+  portfolioUrl?: string;
+  bio: string[];
+};
+
+const team: TeamMember[] = [
+  {
+    name: "Wisdom Chizitere",
+    role: "Graphic Designer",
+    photo: "/team/wisdom-chizitere.jpg",
+    portfolioUrl: "https://www.behance.net/wisdomchizitere",
+    bio: [
+      "With over five years of experience in graphic design, Wisdom Chizitere has worked across brand identity, digital marketing, social media, and campaign design. His experience spans technology, logistics, real estate, hospitality, education, and e-commerce.",
+      "He focuses on understanding the business behind the design and turning its ideas into clear, distinctive, and purposeful visuals.",
+    ],
+  },
+  {
+    name: "Emmanuel Ugama",
+    role: "Data Analyst",
+    photo: "/team/emmanuel.jpg",
+    bio: [
+      "Emmanuel works with data to help the organization better understand its operations, performance, and emerging trends. His role involves collecting, organizing, analyzing, and interpreting data to generate insights that support informed decision-making across the company.",
+      "He works with analytical tools to analyze datasets, develop reports and dashboards, identify patterns, and present information in a clear and actionable format. With a strong analytical and problem-solving approach, Emmanuel focuses on making data more useful to the organization and supporting better decisions through accurate, well-interpreted information.",
+    ],
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -133,6 +163,63 @@ export default function AboutPage() {
               </Button>
             </div>
           </div>
+        </div>
+      </Section>
+
+      {/* Team */}
+      <Section tone="dark">
+        <Eyebrow index="02">Team</Eyebrow>
+        <div className="mt-8 space-y-14">
+          {team.map((member) => (
+            <div key={member.name} className="grid gap-10 lg:grid-cols-12">
+              <Frame className="lg:col-span-3">
+                <div className="notch-lg relative aspect-[4/5] w-full max-w-[16rem] overflow-hidden border border-lime/40 bg-forest lg:max-w-none">
+                  {member.photo ? (
+                    <Image
+                      src={member.photo}
+                      alt={`${member.name}, ${member.role} at Identris Systems Limited`}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(min-width: 1024px) 260px, 256px"
+                    />
+                  ) : (
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-0 flex items-center justify-center font-heading text-6xl font-semibold text-lime/60"
+                    >
+                      {member.name.charAt(0)}
+                    </span>
+                  )}
+                </div>
+              </Frame>
+              <div className="lg:col-span-9">
+                <h2 className="font-heading text-3xl font-semibold text-sage md:text-4xl">
+                  {member.name}
+                </h2>
+                <p className="mt-1 font-mono-tech text-xs uppercase tracking-[0.15em] text-lime">
+                  {member.role}
+                </p>
+                <div className="mt-5 space-y-4 border-t border-sage-dim/20 pt-5 text-base leading-relaxed text-sage-dim md:text-lg">
+                  {member.bio.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+                {member.portfolioUrl && (
+                  <div className="mt-6">
+                    <Button
+                      href={member.portfolioUrl}
+                      variant="secondary"
+                      className="text-xs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Portfolio ↗
+                    </Button>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </Section>
 
