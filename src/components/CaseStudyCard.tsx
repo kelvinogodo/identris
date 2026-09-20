@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 import type { CaseStudy } from "@/lib/types";
 import { Frame } from "@/components/ui/Frame";
 import { Stat } from "@/components/ui/Stat";
@@ -53,13 +53,10 @@ export function CaseStudyCard({
             ))}
           </div>
 
-          <Link
-            href={`/work#${caseStudy.slug}`}
-            className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-lime hover:underline"
-          >
+          <Button href={`/work#${caseStudy.slug}`} variant="primary" className="mt-8">
             Read the full case study
             <Icon name="arrow-right" className="nudge-x h-4 w-4" />
-          </Link>
+          </Button>
         </div>
       </div>
     );

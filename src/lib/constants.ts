@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Identris Systems Limited builds identity, web, and infrastructure systems for businesses, NGOs, and government parastatals across Nigeria.",
   founder: "Kelvin Ogodo",
-  email: "hello@identris.example.com", // TODO: replace with real contact email
+  email: "identrissystemslimited@gmail.com",
   phone: "", // TODO: add phone number if it should be public
   location: "Nigeria",
   github: "https://github.com/kelvinogodo",

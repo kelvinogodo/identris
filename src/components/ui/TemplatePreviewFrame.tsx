@@ -48,7 +48,7 @@ export function TemplatePreviewFrame({
         ref={iframeRef}
         src={src}
         title={title}
-        loading="lazy"
+        loading="eager"
         tabIndex={-1}
         aria-hidden="true"
         className="pointer-events-none absolute left-0 top-0 origin-top-left border-0"
