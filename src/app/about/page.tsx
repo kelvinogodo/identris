@@ -70,6 +70,15 @@ const team: TeamMember[] = [
       "He works with analytical tools to analyze datasets, develop reports and dashboards, identify patterns, and present information in a clear and actionable format. With a strong analytical and problem-solving approach, Emmanuel focuses on making data more useful to the organization and supporting better decisions through accurate, well-interpreted information.",
     ],
   },
+  {
+    name: "Timothy",
+    role: "Full Stack Engineer",
+    photo: "/team/timothy.jpg",
+    bio: [
+      "Timothy is a full stack engineer who builds web applications from the interface down to the backend and database. He enjoys working through difficult product problems and turning ideas into software that is simple to use and reliable in practice.",
+      "He has experience building business tools, web platforms, APIs and other production applications, and is comfortable working across different parts of a product when needed.",
+    ],
+  },
 ];
 
 export default function AboutPage() {
