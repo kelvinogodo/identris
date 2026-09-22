@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Design Templates",
   description:
-    "Browse illustrative design directions by industry — e-commerce, legal, government, logistics, and more — to picture your own project with Identris.",
+    "Browse illustrative design directions by industry (e-commerce, legal, government, logistics, and more) to picture your own project with Identris.",
   path: "/templates",
 });
 
@@ -22,7 +22,7 @@ export default function TemplatesPage() {
         </h1>
         <p className="mt-5 max-w-2xl text-xl text-sage-dim">
           Browse how a system like this could look for your industry. These
-          are illustrative design directions, not working sites — a starting
+          are illustrative design directions, not working sites: a starting
           point for a conversation about what we&apos;d actually build for you.
         </p>
       </Section>

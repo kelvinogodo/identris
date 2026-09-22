@@ -26,7 +26,7 @@ const principles = [
     icon: "fingerprint" as const,
     title: "Security",
     description:
-      "When a system holds identity data, financial records, or institutional information, security isn't a feature — it's the baseline every other decision sits on top of.",
+      "When a system holds identity data, financial records, or institutional information, security isn't a feature; it's the baseline every other decision sits on top of.",
   },
   {
     icon: "server" as const,
@@ -38,7 +38,7 @@ const principles = [
     icon: "waveform" as const,
     title: "Clear Communication",
     description:
-      "Clients get a straight answer about what's possible, what it costs, and what could go wrong — before the work starts, not after.",
+      "Clients get a straight answer about what's possible, what it costs, and what could go wrong, before the work starts, not after.",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function AboutPage() {
           <div className="lg:col-span-8 lg:col-start-1 space-y-5 text-base leading-relaxed text-sage-dim md:text-lg">
             <p>
               Identris Systems Limited exists because most organizations don&apos;t
-              need more software — they need a system they can stop worrying
+              need more software; they need a system they can stop worrying
               about. That means a site that stays up, an admin platform that
               reflects how the team actually works, and a technology partner
               who is still answering the phone six months after launch.
@@ -102,8 +102,8 @@ export default function AboutPage() {
               We work across the full stack: from fingerprint scanners and
               cameras deployed on the ground, to the cloud infrastructure that
               holds the record of truth behind them. That range exists because
-              the projects we take on — government enrollment systems,
-              business platforms, NGO tools — usually fail at the seams between
+              the projects we take on (government enrollment systems,
+              business platforms, NGO tools) usually fail at the seams between
               hardware, software, and support, not inside any one layer.
             </p>
             <p>
@@ -111,8 +111,8 @@ export default function AboutPage() {
               for the Ebonyi State Local Government Service Commission, running
               across all 13 Local Government Areas with real government
               hardware and sensitive personnel data. It is proof the company
-              can build and support systems under real institutional pressure —
-              compliance, uptime, and data that cannot be allowed to go wrong —
+              can build and support systems under real institutional pressure
+              (compliance, uptime, and data that cannot be allowed to go wrong),
               not a narrow specialty in government work. The same discipline
               carries over to every business and NGO system we build.
             </p>
@@ -148,9 +148,9 @@ export default function AboutPage() {
                 background that spans frontend interfaces, backend systems,
                 and the field hardware integration work most software
                 companies never touch. That range is what let Identris take
-                on a government biometric enrollment project — spanning
+                on a government biometric enrollment project (spanning
                 fingerprint scanners, cameras, and Starlink connectivity
-                across 13 LGAs — and deliver it as a company, not a
+                across 13 LGAs) and deliver it as a company, not a
                 freelancer stretched past capacity.
               </p>
               <p>

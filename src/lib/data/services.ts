@@ -48,7 +48,7 @@ export const services: ServiceItem[] = [
     slug: "infrastructure-hosting-maintenance",
     name: "Infrastructure, Hosting, and Ongoing Maintenance",
     summary:
-      "Deployment, monitoring, and maintenance for systems that need to stay up — including connectivity solutions like Starlink for sites without reliable fixed-line internet.",
+      "Deployment, monitoring, and maintenance for systems that need to stay up, including connectivity solutions like Starlink for sites without reliable fixed-line internet.",
     includes: [
       "Cloud hosting setup and deployment pipelines",
       "Uptime monitoring and incident response",

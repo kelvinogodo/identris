@@ -22,7 +22,7 @@ export default function ServicesPage() {
           What Identris Builds
         </h1>
         <p className="mt-5 max-w-2xl text-xl text-sage-dim">
-          Five areas of work, all built by the same team — so the system that
+          Five areas of work, all built by the same team, so the system that
           captures a fingerprint in the field and the dashboard that reviews
           it centrally are never handed off between strangers.
         </p>

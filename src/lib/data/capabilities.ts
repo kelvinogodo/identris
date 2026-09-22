@@ -33,7 +33,7 @@ export const capabilities: Capability[] = [
     icon: "server",
     title: "Infrastructure and Maintenance",
     description:
-      "Hosting, monitoring, and connectivity — including field-ready solutions like Starlink — kept running long after launch day.",
+      "Hosting, monitoring, and connectivity, including field-ready solutions like Starlink, kept running long after launch day.",
     href: "/services#infrastructure-hosting-maintenance",
   },
 ];

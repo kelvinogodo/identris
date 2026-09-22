@@ -51,7 +51,7 @@ export function ContactForm() {
           We&apos;ll be in touch.
         </h2>
         <p className="mt-2 text-sage-dim">
-          Thanks for reaching out — expect a reply within one to two business
+          Thanks for reaching out: expect a reply within one to two business
           days.
         </p>
       </div>
@@ -72,7 +72,7 @@ export function ContactForm() {
         <div className="notch-sm border border-lime/30 bg-lime/5 px-4 py-3 font-mono-tech text-[11px] uppercase tracking-[0.1em] text-sage-dim">
           Referencing{" "}
           <span className="text-lime">{referencedTemplate.categoryLabel}</span>
-          {" — "}
+          {": "}
           {referencedTemplate.title}
         </div>
       )}

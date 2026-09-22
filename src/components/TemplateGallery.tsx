@@ -175,7 +175,7 @@ export function TemplateGallery({ templates }: { templates: TemplateEntry[] }) {
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-b border-sage-dim/15 pb-4">
               <p className="font-mono-tech text-[10px] uppercase tracking-[0.15em] text-sage-dim/70">
-                Live preview — scroll to browse, non-final content
+                Live preview: scroll to browse, non-final content
               </p>
               <a
                 href={preview.mockupUrl}

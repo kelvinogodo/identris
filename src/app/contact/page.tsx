@@ -10,7 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
   description:
-    "Start a project with Identris Systems Limited — tell us about your organization and what you need built.",
+    "Start a project with Identris Systems Limited: tell us about your organization and what you need built.",
   path: "/contact",
 });
 

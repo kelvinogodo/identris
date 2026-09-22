@@ -30,7 +30,7 @@ export function SocialLinks({ className = "" }: { className?: string }) {
           <span
             key={social.label}
             aria-label={`${social.label} (coming soon)`}
-            title={`${social.label} — coming soon`}
+            title={`${social.label} (coming soon)`}
             className="cursor-not-allowed text-sage-dim/30"
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">

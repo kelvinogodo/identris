@@ -77,7 +77,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-sage-dim/20 pt-6 font-mono-tech text-[11px] uppercase tracking-[0.1em] text-sage-dim/70 md:flex-row md:items-center md:justify-between">
           <p>
-            © {year} {siteConfig.name} — all rights reserved.
+            © {year} {siteConfig.name}, all rights reserved.
           </p>
           <p className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 bg-lime" aria-hidden="true" />

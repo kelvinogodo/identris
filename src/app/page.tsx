@@ -15,7 +15,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Systems Built to Scale and Stay Up",
   description:
-    "Identris Systems Limited designs and builds identity, web, and infrastructure systems for businesses, NGOs, and government parastatals — proven under real institutional pressure.",
+    "Identris Systems Limited designs and builds identity, web, and infrastructure systems for businesses, NGOs, and government parastatals, proven under real institutional pressure.",
   path: "/",
 });
 
@@ -28,21 +28,21 @@ const process = [
     step: "01 / Discover",
     title: "Discover",
     description:
-      "We start with what your organization actually needs to run — the workflows, the constraints, the data that has to stay clean.",
+      "We start with what your organization actually needs to run: the workflows, the constraints, the data that has to stay clean.",
   },
   {
     icon: "blueprint" as const,
     step: "02 / Design",
     title: "Design",
     description:
-      "A clear plan for how the system will look, behave, and hold up — reviewed with you before a line of production code is written.",
+      "A clear plan for how the system will look, behave, and hold up, reviewed with you before a line of production code is written.",
   },
   {
     icon: "circuit" as const,
     step: "03 / Build",
     title: "Build",
     description:
-      "Engineering across the full stack — from field hardware integration to the cloud backend that holds the record of truth.",
+      "Engineering across the full stack, from field hardware integration to the cloud backend that holds the record of truth.",
   },
   {
     icon: "waveform" as const,
@@ -65,7 +65,7 @@ export default function HomePage() {
           </h1>
           <p className="mt-6 max-w-xl text-xl text-sage-dim">
             Identris Systems Limited builds identity, web, and infrastructure
-            systems for businesses, NGOs, and government parastatals —
+            systems for businesses, NGOs, and government parastatals,
             engineered to keep working when it matters most.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
