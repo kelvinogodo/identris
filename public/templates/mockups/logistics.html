@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Swiftlane Logistics</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%2218%2017%20292%20293%22%20fill%3D%22%23f2994a%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M163%2017H235A75%2075%200%200%201%20310%2092V235A75%2075%200%200%201%20235%20310H90V253A15%2015%200%200%200%2075%20238H18V162ZM107%2092H220A15%2015%200%200%201%20235%20107V220A15%2015%200%200%201%20220%20235H107A15%2015%200%200%201%2092%20220V107A15%2015%200%200%201%20107%2092Z%22%2F%3E%3Cpath%20d%3D%22M18%2017H92V88L90%2090H18Z%22%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -86,9 +87,51 @@ footer{border-top:1px solid var(--line);padding:56px 0 28px;color:var(--muted);f
   [style*="grid-template-columns"]>*,.bento>*,.hero-grid>*,.programs>*,.products>*{min-width:0}
   h1,h2,h3,h4,p{overflow-wrap:break-word}
 }
+
+/* ---- Identris template branding ---- */
+.idx-mark{display:block;fill:currentColor;flex-shrink:0}
+.idx-badge{position:fixed;right:20px;bottom:20px;z-index:60;display:inline-flex;align-items:center;gap:8px;padding:10px 15px 10px 12px;font-family:inherit;font-size:12px;font-weight:600;line-height:1;white-space:nowrap}
+.idx-badge .idx-mark{width:18px;height:18px}
+.idx-band{position:relative;overflow:hidden;padding-block:80px}
+.idx-band-inner{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.idx-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;line-height:1;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
+.idx-eyebrow .idx-mark{width:15px;height:15px}
+.idx-title{font-size:clamp(26px,3.2vw,40px);line-height:1.12;margin-bottom:16px}
+.idx-copy{max-width:52ch;font-size:15px;line-height:1.65}
+.idx-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.idx-chip{display:inline-block;font-size:12px;font-weight:600;line-height:1;padding:9px 13px}
+.idx-art{position:relative;display:flex;align-items:center;justify-content:center;min-height:280px}
+.idx-art .idx-mark{width:150px;height:150px}
+.idx-art-tag{position:absolute;font-size:11px;font-weight:700;line-height:1;letter-spacing:.08em;text-transform:uppercase}
+.idx-lockup{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:inherit;vertical-align:middle}
+.idx-lockup .idx-mark{width:14px;height:14px}
+footer{padding-bottom:84px !important}
+@media (max-width:720px){
+  .idx-band{padding-block:56px}
+  .idx-band-inner{grid-template-columns:1fr;gap:32px}
+  .idx-art{min-height:220px}
+  .idx-art .idx-mark{width:110px;height:110px}
+  .idx-badge{right:12px;bottom:12px;padding:8px 11px 8px 9px;font-size:10px;gap:6px}
+  .idx-badge .idx-mark{width:14px;height:14px}
+  footer{padding-bottom:64px !important}
+}
+:root{--idx-on-accent:#16161A}
+.idx-band{background:var(--surface,var(--panel,var(--mint,var(--cream,var(--bg)))));border-top:1px solid var(--line);color:var(--text,var(--ink))}
+.idx-eyebrow{color:var(--accent)}
+.idx-copy{color:var(--muted)}
+.idx-chip{color:var(--text,var(--ink));border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+.idx-art{border-radius:24px;border:1px solid var(--line);background:radial-gradient(circle at 50% 45%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 65%),var(--bg);overflow:hidden}
+.idx-art .idx-mark{position:relative;color:var(--accent)}
+.idx-art .idx-mark.ghost{position:absolute;width:340px;height:340px;right:-90px;bottom:-110px;fill:none;stroke:var(--accent);stroke-width:2px;opacity:.35;vector-effect:non-scaling-stroke}
+.idx-art .idx-mark.ghost *{vector-effect:non-scaling-stroke}
+.idx-art-tag{top:20px;left:22px;color:var(--text,var(--ink));opacity:.7}
+.idx-art-tag.alt{display:none}
+.idx-badge{color:var(--text,var(--ink));background:var(--bg);border:1px solid var(--line);border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.idx-badge .idx-mark,.idx-lockup .idx-mark{color:var(--accent)}
 </style>
 </head>
 <body>
+<a class="idx-badge" href="/" target="_top" aria-label="Identris template"><svg class="idx-mark" viewBox="18 17 292 293" aria-hidden="true"><path fill-rule="evenodd" d="M163 17H235A75 75 0 0 1 310 92V235A75 75 0 0 1 235 310H90V253A15 15 0 0 0 75 238H18V162ZM107 92H220A15 15 0 0 1 235 107V220A15 15 0 0 1 220 235H107A15 15 0 0 1 92 220V107A15 15 0 0 1 107 92Z"/><path d="M18 17H92V88L90 90H18Z"/></svg>Identris template</a>
 <nav><div class="wrap navrow">
   <div class="logo">SWIFTLANE</div>
   <ul class="navlinks"><li>Services</li><li>Track</li><li>Coverage</li><li>Business</li></ul>
@@ -138,6 +181,19 @@ footer{border-top:1px solid var(--line);padding:56px 0 28px;color:var(--muted);f
   </div>
 </div></section>
 
+
+<section class="idx-band" aria-label="Identris template"><div class="wrap">
+  <div class="idx-band-inner">
+    <div>
+      <div class="idx-eyebrow"><svg class="idx-mark" viewBox="18 17 292 293" aria-hidden="true"><path fill-rule="evenodd" d="M163 17H235A75 75 0 0 1 310 92V235A75 75 0 0 1 235 310H90V253A15 15 0 0 0 75 238H18V162ZM107 92H220A15 15 0 0 1 235 107V220A15 15 0 0 1 220 235H107A15 15 0 0 1 92 220V107A15 15 0 0 1 107 92Z"/><path d="M18 17H92V88L90 90H18Z"/></svg>Identris Template · Signature</div>
+      <h2 class="idx-title">Designed for Swiftlane Logistics.<br>Built by Identris.</h2>
+      <p class="idx-copy">This concept is an Identris Systems template. Its layout, palette, typography and copy were shaped around the Swiftlane Logistics brand, and every template we ship is tailored to its client the same way.</p>
+      <div class="idx-chips"><span class="idx-chip">Custom palette</span><span class="idx-chip">Brand typography</span><span class="idx-chip">Tailored copy</span></div>
+    </div>
+    <div class="idx-art"><svg class="idx-mark ghost" viewBox="18 17 292 293" aria-hidden="true"><path fill-rule="evenodd" d="M163 17H235A75 75 0 0 1 310 92V235A75 75 0 0 1 235 310H90V253A15 15 0 0 0 75 238H18V162ZM107 92H220A15 15 0 0 1 235 107V220A15 15 0 0 1 220 235H107A15 15 0 0 1 92 220V107A15 15 0 0 1 107 92Z"/><path d="M18 17H92V88L90 90H18Z"/></svg><svg class="idx-mark" viewBox="18 17 292 293" aria-hidden="true"><path fill-rule="evenodd" d="M163 17H235A75 75 0 0 1 310 92V235A75 75 0 0 1 235 310H90V253A15 15 0 0 0 75 238H18V162ZM107 92H220A15 15 0 0 1 235 107V220A15 15 0 0 1 220 235H107A15 15 0 0 1 92 220V107A15 15 0 0 1 107 92Z"/><path d="M18 17H92V88L90 90H18Z"/></svg><span class="idx-art-tag">Identris</span><span class="idx-art-tag alt">Template</span></div>
+  </div>
+</div></section>
+
 <footer><div class="wrap">
   <div class="foot-grid">
     <div><div class="logo" style="margin-bottom:12px">SWIFTLANE</div><p style="max-width:30ch">Regional courier and freight, built for businesses that can't afford delays.</p></div>
@@ -146,7 +202,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 28px;color:var(--muted);f
     <div><h4>Support</h4><ul><li>Track a Shipment</li><li>Help Center</li><li>Contact Us</li></ul></div>
   </div>
   <div class="foot-bottom">
-    <span>© Swiftlane Logistics — illustrative design direction, built by Identris.</span>
+    <span>© Swiftlane Logistics · Illustrative concept by <a class="idx-lockup" href="/" target="_top"><svg class="idx-mark" viewBox="18 17 292 293" aria-hidden="true"><path fill-rule="evenodd" d="M163 17H235A75 75 0 0 1 310 92V235A75 75 0 0 1 235 310H90V253A15 15 0 0 0 75 238H18V162ZM107 92H220A15 15 0 0 1 235 107V220A15 15 0 0 1 220 235H107A15 15 0 0 1 92 220V107A15 15 0 0 1 107 92Z"/><path d="M18 17H92V88L90 90H18Z"/></svg>Identris</a></span>
     <span>Lagos · Accra · Nairobi</span>
   </div>
 </div></footer>

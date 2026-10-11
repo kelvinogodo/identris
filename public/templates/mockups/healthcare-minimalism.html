@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WELL. — Minimalist Direction</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%2218%2017%20292%20293%22%20fill%3D%22%230A0A0A%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M163%2017H235A75%2075%200%200%201%20310%2092V235A75%2075%200%200%201%20235%20310H90V253A15%2015%200%200%200%2075%20238H18V162ZM107%2092H220A15%2015%200%200%201%20235%20107V220A15%2015%200%200%201%20220%20235H107A15%2015%200%200%201%2092%20220V107A15%2015%200%200%201%20107%2092Z%22%2F%3E%3Cpath%20d%3D%22M18%2017H92V88L90%2090H18Z%22%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -80,9 +81,54 @@ footer{padding:80px 0 40px;border-top:1px solid var(--line)}
   [style*="grid-template-columns"]>*,.bento>*,.hero-grid>*,.programs>*,.products>*{min-width:0}
   h1,h2,h3,h4,p{overflow-wrap:break-word}
 }
+
+/* ---- Identris template branding ---- */
+.idx-mark{display:block;fill:currentColor;flex-shrink:0}
+.idx-badge{position:fixed;right:20px;bottom:20px;z-index:60;display:inline-flex;align-items:center;gap:8px;padding:10px 15px 10px 12px;font-family:inherit;font-size:12px;font-weight:600;line-height:1;white-space:nowrap}
+.idx-badge .idx-mark{width:18px;height:18px}
+.idx-band{position:relative;overflow:hidden;padding-block:80px}
+.idx-band-inner{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.idx-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;line-height:1;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
+.idx-eyebrow .idx-mark{width:15px;height:15px}
+.idx-title{font-size:clamp(26px,3.2vw,40px);line-height:1.12;margin-bottom:16px}
+.idx-copy{max-width:52ch;font-size:15px;line-height:1.65}
+.idx-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.idx-chip{display:inline-block;font-size:12px;font-weight:600;line-height:1;padding:9px 13px}
+.idx-art{position:relative;display:flex;align-items:center;justify-content:center;min-height:280px}
+.idx-art .idx-mark{width:150px;height:150px}
+.idx-art-tag{position:absolute;font-size:11px;font-weight:700;line-height:1;letter-spacing:.08em;text-transform:uppercase}
+.idx-lockup{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:inherit;vertical-align:middle}
+.idx-lockup .idx-mark{width:14px;height:14px}
+footer{padding-bottom:84px !important}
+@media (max-width:720px){
+  .idx-band{padding-block:56px}
+  .idx-band-inner{grid-template-columns:1fr;gap:32px}
+  .idx-art{min-height:220px}
+  .idx-art .idx-mark{width:110px;height:110px}
+  .idx-badge{right:12px;bottom:12px;padding:8px 11px 8px 9px;font-size:10px;gap:6px}
+  .idx-badge .idx-mark{width:14px;height:14px}
+  footer{padding-bottom:64px !important}
+}
+:root{--idx-on-accent:#FFFFFF}
+.idx-band{padding-block:110px;border-top:1px solid var(--line)}
+.idx-eyebrow{color:var(--muted);font-weight:500;font-size:11px;letter-spacing:.22em}
+.idx-title{font-weight:500}
+.idx-title em{font-style:italic}
+.idx-copy{color:var(--muted);font-size:13px;line-height:1.8}
+.idx-chips{gap:0}
+.idx-chip{color:var(--text);font-weight:500;font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:0 16px;border-left:1px solid var(--line)}
+.idx-chip:first-child{padding-left:0;border-left:0}
+.idx-art{border:1px solid var(--line);min-height:320px}
+.idx-art .idx-mark{fill:none;stroke:var(--text);stroke-width:1.25px;vector-effect:non-scaling-stroke}
+.idx-art .idx-mark *{vector-effect:non-scaling-stroke}
+.idx-art-tag{bottom:18px;left:20px;color:var(--muted);font-weight:500;font-size:10px;letter-spacing:.2em}
+.idx-art-tag.alt{left:auto;right:20px}
+.idx-badge{color:var(--text);background:var(--bg);border:1px solid var(--text);font-weight:500;font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:11px 15px 11px 12px}
+.idx-badge .idx-mark{width:15px;height:15px}
 </style>
 </head>
 <body>
+<a class="idx-badge" href="/" target="_top" aria-label="Identris template"><svg class="idx-mark" viewBox="18 17 292 293" aria-hidden="true"><path fill-rule="evenodd" d="M163 17H235A75 75 0 0 1 310 92V235A75 75 0 0 1 235 310H90V253A15 15 0 0 0 75 238H18V162ZM107 92H220A15 15 0 0 1 235 107V220A15 15 0 0 1 220 235H107A15 15 0 0 1 92 220V107A15 15 0 0 1 107 92Z"/><path d="M18 17H92V88L90 90H18Z"/></svg>Identris template</a>
 <nav><div class="wrap navrow">
   <div class="logo">WELL.</div>
   <ul class="navlinks"><li>Care</li><li>Doctors</li><li>Patients</li></ul>
@@ -123,6 +169,19 @@ footer{padding:80px 0 40px;border-top:1px solid var(--line)}
   </div>
 </div></section>
 
+
+<section class="idx-band" aria-label="Identris template"><div class="wrap">
+  <div class="idx-band-inner">
+    <div>
+      <div class="idx-eyebrow"><svg class="idx-mark" viewBox="18 17 292 293" aria-hidden="true"><path fill-rule="evenodd" d="M163 17H235A75 75 0 0 1 310 92V235A75 75 0 0 1 235 310H90V253A15 15 0 0 0 75 238H18V162ZM107 92H220A15 15 0 0 1 235 107V220A15 15 0 0 1 220 235H107A15 15 0 0 1 92 220V107A15 15 0 0 1 107 92Z"/><path d="M18 17H92V88L90 90H18Z"/></svg>Identris Template · Minimalism</div>
+      <h2 class="idx-title">Designed for WELL.<br>Built by <em>Identris</em>.</h2>
+      <p class="idx-copy">This concept is an Identris Systems template. Its layout, palette, typography and copy were shaped around the WELL. brand, and every template we ship is tailored to its client the same way.</p>
+      <div class="idx-chips"><span class="idx-chip">Custom palette</span><span class="idx-chip">Brand typography</span><span class="idx-chip">Tailored copy</span></div>
+    </div>
+    <div class="idx-art"><svg class="idx-mark" viewBox="18 17 292 293" aria-hidden="true"><path fill-rule="evenodd" d="M163 17H235A75 75 0 0 1 310 92V235A75 75 0 0 1 235 310H90V253A15 15 0 0 0 75 238H18V162ZM107 92H220A15 15 0 0 1 235 107V220A15 15 0 0 1 220 235H107A15 15 0 0 1 92 220V107A15 15 0 0 1 107 92Z"/><path d="M18 17H92V88L90 90H18Z"/></svg><span class="idx-art-tag">Identris</span><span class="idx-art-tag alt">Template</span></div>
+  </div>
+</div></section>
+
 <footer><div class="wrap">
   <div class="foot-grid">
     <div><h4>Well.</h4><p style="color:var(--muted);font-size:13px;max-width:30ch">Primary and family care, plainly explained.</p></div>
@@ -131,7 +190,7 @@ footer{padding:80px 0 40px;border-top:1px solid var(--line)}
     <div><h4>Contact</h4><ul><li>Lekki, Lagos</li><li>care@well.example</li></ul></div>
   </div>
   <div class="foot-bottom">
-    <span>© WELL. — illustrative design direction, built by Identris.</span>
+    <span>© WELL. · Illustrative concept by <a class="idx-lockup" href="/" target="_top"><svg class="idx-mark" viewBox="18 17 292 293" aria-hidden="true"><path fill-rule="evenodd" d="M163 17H235A75 75 0 0 1 310 92V235A75 75 0 0 1 235 310H90V253A15 15 0 0 0 75 238H18V162ZM107 92H220A15 15 0 0 1 235 107V220A15 15 0 0 1 220 235H107A15 15 0 0 1 92 220V107A15 15 0 0 1 107 92Z"/><path d="M18 17H92V88L90 90H18Z"/></svg>Identris</a></span>
     <span>Mon–Sat, 8am–7pm · Lagos</span>
   </div>
 </div></footer>
